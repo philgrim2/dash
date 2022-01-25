@@ -1,7 +1,7 @@
-Contributing to Dash Core
+Contributing to Thought Core
 ============================
 
-The Dash Core project operates an open contributor model where anyone is
+The Dash Thought project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.
@@ -82,7 +82,7 @@ Examples:
     Trivial: Fix typo in init.cpp
 
 Note that translations should not be submitted as pull requests, please see
-[Translation Process](https://github.com/dashpay/dash/blob/master/doc/translation_process.md) 
+[Translation Process](https://github.com/thoughtnetwork/thought/blob/master/doc/translation_process.md) 
 for more information on helping with translations.
 
 If a pull request is not to be considered for merging (yet), please
@@ -250,7 +250,7 @@ function gfd() {
 
 ### Finding Reviewers
 
-The review process is normally fairly responsive on the Dash Core repository, however
+The review process is normally fairly responsive on the Thought Core repository, however
 this might not always be the case. If you find that you've been waiting
 for a pull request to be given attention for several months, there may be a number
 of reasons for this, some of which you can do something about:
@@ -282,7 +282,7 @@ of reasons for this, some of which you can do something about:
 Release Policy
 --------------
 
-The project leader is the release manager for each Dash Core release.
+The project leader is the release manager for each Thought Core release.
 
 Copyright
 ---------

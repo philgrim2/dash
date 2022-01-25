@@ -1,24 +1,20 @@
-Dash Core staging tree 0.17
+ThoughtCore staging tree 0.19
 ===========================
 
-|CI|master|develop|
-|-|-|-|
-|Gitlab|[![Build Status](https://gitlab.com/dashpay/dash/badges/master/pipeline.svg)](https://gitlab.com/dashpay/dash/-/tree/master)|[![Build Status](https://gitlab.com/dashpay/dash/badges/develop/pipeline.svg)](https://gitlab.com/dashpay/dash/-/tree/develop)|
-
-https://www.dash.org
+https://www.thought.live
 
 
-What is Dash?
+What is ThoughtCore?
 -------------
 
-Dash is an experimental digital currency that enables instant, private
+Thought (THT) is an experimental digital currency that enables instant, private
 payments to anyone, anywhere in the world. Dash uses peer-to-peer technology
 to operate with no central authority: managing transactions and issuing money
-are carried out collectively by the network. Dash Core is the name of the open
-source software which enables the use of this currency.
+are carried out collectively by the network. ThoughtCore is the name of the open
+source software which enables the use of this currency.  
 
-For more information, as well as an immediately useable, binary version of
-the Dash Core software, see https://www.dash.org/get-dash/.
+For more information about the Thought blockchain, visit https://thought.live
+For more information about the ThoughtAI project based on this blockchain`
 
 
 License
