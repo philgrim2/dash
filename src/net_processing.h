@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NET_PROCESSING_H
-#define BITCOIN_NET_PROCESSING_H
+#ifndef THOUGHT_NET_PROCESSING_H
+#define THOUGHT_NET_PROCESSING_H
 
 #include <net.h>
 #include <validation.h>
@@ -98,4 +99,4 @@ void EraseObjectRequest(NodeId nodeId, const CInv& inv);
 void RequestObject(NodeId nodeId, const CInv& inv, std::chrono::microseconds current_time, bool fForce=false);
 size_t GetRequestedObjectCount(NodeId nodeId);
 
-#endif // BITCOIN_NET_PROCESSING_H
+#endif // THOUGHT_NET_PROCESSING_H

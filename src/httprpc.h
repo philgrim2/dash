@@ -1,9 +1,10 @@
 // Copyright (c) 2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_HTTPRPC_H
-#define BITCOIN_HTTPRPC_H
+#ifndef THOUGHT_HTTPRPC_H
+#define THOUGHT_HTTPRPC_H
 
 #include <string>
 #include <map>
@@ -32,4 +33,4 @@ void InterruptREST();
  */
 void StopREST();
 
-#endif
+#endif //THOUGHT_HTTPRPC_H

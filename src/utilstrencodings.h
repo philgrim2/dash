@@ -1,13 +1,14 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 /**
  * Utilities for converting data from/to strings.
  */
-#ifndef BITCOIN_UTILSTRENCODINGS_H
-#define BITCOIN_UTILSTRENCODINGS_H
+#ifndef THOUGHT_UTILSTRENCODINGS_H
+#define THOUGHT_UTILSTRENCODINGS_H
 
 #include <attributes.h>
 
@@ -185,4 +186,4 @@ bool ConvertBits(const O& outfn, I it, I end) {
     return true;
 }
 
-#endif // BITCOIN_UTILSTRENCODINGS_H
+#endif // THOUGHT_UTILSTRENCODINGS_H

@@ -1,7 +1,8 @@
 // Copyright (c) 2014-2020 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
-#ifndef BITCOIN_HDCHAIN_H
-#define BITCOIN_HDCHAIN_H
+#ifndef THOUGHT_HDCHAIN_H
+#define THOUGHT_HDCHAIN_H
 
 #include <key.h>
 #include <sync.h>
@@ -147,4 +148,4 @@ public:
     std::string GetKeyPath() const;
 };
 
-#endif // BITCOIN_HDCHAIN_H
+#endif // THOUGHT_HDCHAIN_H

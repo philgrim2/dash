@@ -1,12 +1,13 @@
 // Copyright (c) 2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 /**
  * Functionality for communicating with Tor.
  */
-#ifndef BITCOIN_TORCONTROL_H
-#define BITCOIN_TORCONTROL_H
+#ifndef THOUGHT_TORCONTROL_H
+#define THOUGHT_TORCONTROL_H
 
 #include <scheduler.h>
 
@@ -17,4 +18,4 @@ void StartTorControl();
 void InterruptTorControl();
 void StopTorControl();
 
-#endif /* BITCOIN_TORCONTROL_H */
+#endif /* THOUGHT_TORCONTROL_H */

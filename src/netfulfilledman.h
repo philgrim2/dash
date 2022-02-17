@@ -1,9 +1,10 @@
 // Copyright (c) 2014-2020 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NETFULFILLEDMAN_H
-#define BITCOIN_NETFULFILLEDMAN_H
+#ifndef THOUGHT_NETFULFILLEDMAN_H
+#define THOUGHT_NETFULFILLEDMAN_H
 
 #include <netaddress.h>
 #include <serialize.h>
@@ -50,4 +51,4 @@ public:
     void DoMaintenance();
 };
 
-#endif // BITCOIN_NETFULFILLEDMAN_H
+#endif // THOUGHT_NETFULFILLEDMAN_H

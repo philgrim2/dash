@@ -1,9 +1,10 @@
 // Copyright (c) 2017 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_FS_H
-#define BITCOIN_FS_H
+#ifndef THOUGHT_FS_H
+#define THOUGHT_FS_H
 
 #include <stdio.h>
 #include <string>
@@ -21,4 +22,4 @@ namespace fsbridge {
     FILE *freopen(const fs::path& p, const char *mode, FILE *stream);
 };
 
-#endif // BITCOIN_FS_H
+#endif // THOUGHT_FS_H

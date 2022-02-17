@@ -1,9 +1,10 @@
 // Copyright (c) 2012-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_LIMITEDMAP_H
-#define BITCOIN_LIMITEDMAP_H
+#ifndef THOUGHT_LIMITEDMAP_H
+#define THOUGHT_LIMITEDMAP_H
 
 #include <assert.h>
 #include <algorithm>
@@ -115,4 +116,4 @@ public:
     }
 };
 
-#endif // BITCOIN_LIMITEDMAP_H
+#endif // THOUGHT_LIMITEDMAP_H

@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CHAINPARAMS_H
-#define BITCOIN_CHAINPARAMS_H
+#ifndef THOUGHT_CHAINPARAMS_H
+#define THOUGHT_CHAINPARAMS_H
 
 #include <chainparamsbase.h>
 #include <consensus/params.h>
@@ -197,4 +198,4 @@ void UpdateLLMQTestParams(int size, int threshold);
  */
 void UpdateLLMQDevnetParams(int size, int threshold);
 
-#endif // BITCOIN_CHAINPARAMS_H
+#endif // THOUGHT_CHAINPARAMS_H

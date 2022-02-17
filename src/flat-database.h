@@ -1,9 +1,10 @@
 // Copyright (c) 2014-2020 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_FLAT_DATABASE_H
-#define BITCOIN_FLAT_DATABASE_H
+#ifndef THOUGHT_FLAT_DATABASE_H
+#define THOUGHT_FLAT_DATABASE_H
 
 #include <chainparams.h>
 #include <clientversion.h>
@@ -225,4 +226,4 @@ public:
 };
 
 
-#endif // BITCOIN_FLAT_DATABASE_H
+#endif // THOUGHT_FLAT_DATABASE_H

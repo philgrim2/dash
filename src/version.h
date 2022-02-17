@@ -1,10 +1,11 @@
 // Copyright (c) 2012-2014 The Bitcoin Core developers
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_VERSION_H
-#define BITCOIN_VERSION_H
+#ifndef THOUGHT_VERSION_H
+#define THOUGHT_VERSION_H
 
 /**
  * network protocol versioning
@@ -48,4 +49,4 @@ static const int MNAUTH_NODE_VER_VERSION = 70218;
 //! introduction of QGETDATA/QDATA messages
 static const int LLMQ_DATA_MESSAGES_VERSION = 70219;
 
-#endif // BITCOIN_VERSION_H
+#endif // THOUGHT_VERSION_H

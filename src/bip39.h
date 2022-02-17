@@ -1,6 +1,7 @@
 /**
  * Copyright (c) 2013-2014 Tomas Dzetkulic
  * Copyright (c) 2013-2014 Pavol Rusnak
+ * Copyright (c) 2018-2022 Thought Network Ltd
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the "Software"),
@@ -21,8 +22,8 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef BITCOIN_BIP39_H
-#define BITCOIN_BIP39_H
+#ifndef THOUGHT_BIP39_H
+#define THOUGHT_BIP39_H
 
 #include <support/allocators/secure.h>
 
@@ -36,4 +37,4 @@ public:
     static void ToSeed(SecureString mnemonic, SecureString passphrase, SecureVector& seedRet);
 };
 
-#endif // BITCOIN_BIP39_H
+#endif // THOUGHT_BIP39_H

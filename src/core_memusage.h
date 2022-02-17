@@ -1,9 +1,10 @@
 // Copyright (c) 2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CORE_MEMUSAGE_H
-#define BITCOIN_CORE_MEMUSAGE_H
+#ifndef THOUGHT_CORE_MEMUSAGE_H
+#define THOUGHT_CORE_MEMUSAGE_H
 
 #include <primitives/transaction.h>
 #include <primitives/block.h>
@@ -64,4 +65,4 @@ static inline size_t RecursiveDynamicUsage(const std::shared_ptr<X>& p) {
     return p ? memusage::DynamicUsage(p) + RecursiveDynamicUsage(*p) : 0;
 }
 
-#endif // BITCOIN_CORE_MEMUSAGE_H
+#endif // THOUGHT_CORE_MEMUSAGE_H

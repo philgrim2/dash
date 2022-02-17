@@ -1,9 +1,10 @@
 // Copyright (c) 2018-2020 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_BATCHEDLOGGER_H
-#define BITCOIN_BATCHEDLOGGER_H
+#ifndef THOUGHT_BATCHEDLOGGER_H
+#define THOUGHT_BATCHEDLOGGER_H
 
 #include <tinyformat.h>
 
@@ -29,4 +30,4 @@ public:
     void Flush();
 };
 
-#endif//BITCOIN_BATCHEDLOGGER_H
+#endif//THOUGHT_BATCHEDLOGGER_H

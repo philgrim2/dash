@@ -1,9 +1,10 @@
 // Copyright (c) 2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_HTTPSERVER_H
-#define BITCOIN_HTTPSERVER_H
+#ifndef THOUGHT_HTTPSERVER_H
+#define THOUGHT_HTTPSERVER_H
 
 #include <string>
 #include <stdint.h>
@@ -150,4 +151,4 @@ private:
 
 std::string urlDecode(const std::string &urlEncoded);
 
-#endif // BITCOIN_HTTPSERVER_H
+#endif // THOUGHT_HTTPSERVER_H

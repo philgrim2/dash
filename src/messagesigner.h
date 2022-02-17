@@ -1,9 +1,10 @@
 // Copyright (c) 2014-2020 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_MESSAGESIGNER_H
-#define BITCOIN_MESSAGESIGNER_H
+#ifndef THOUGHT_MESSAGESIGNER_H
+#define THOUGHT_MESSAGESIGNER_H
 
 #include <key.h>
 
@@ -35,4 +36,4 @@ public:
     static bool VerifyHash(const uint256& hash, const CKeyID& keyID, const std::vector<unsigned char>& vchSig, std::string& strErrorRet);
 };
 
-#endif // BITCOIN_MESSAGESIGNER_H
+#endif // THOUGHT_MESSAGESIGNER_H

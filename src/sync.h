@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SYNC_H
-#define BITCOIN_SYNC_H
+#ifndef THOUGHT_SYNC_H
+#define THOUGHT_SYNC_H
 
 #include <threadsafety.h>
 
@@ -287,4 +288,4 @@ public:
     }
 };
 
-#endif // BITCOIN_SYNC_H
+#endif // THOUGHT_SYNC_H

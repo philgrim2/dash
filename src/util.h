@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,8 +9,8 @@
  * Server/client environment: argument handling, config file parsing,
  * thread wrappers, startup time
  */
-#ifndef BITCOIN_UTIL_H
-#define BITCOIN_UTIL_H
+#ifndef THOUGHT_UTIL_H
+#define THOUGHT_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/dash-config.h>
@@ -364,4 +365,4 @@ std::string CopyrightHolders(const std::string& strPrefix, unsigned int nStartYe
  */
 int ScheduleBatchPriority(void);
 
-#endif // BITCOIN_UTIL_H
+#endif // THOUGHT_UTIL_H

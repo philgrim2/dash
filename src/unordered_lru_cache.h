@@ -1,9 +1,10 @@
 // Copyright (c) 2019-2021 The Dash Core developers
+// Copyright (c) 2020-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UNORDERED_LRU_CACHE_H
-#define BITCOIN_UNORDERED_LRU_CACHE_H
+#ifndef THOUGHT_UNORDERED_LRU_CACHE_H
+#define THOUGHT_UNORDERED_LRU_CACHE_H
 
 #include <unordered_map>
 
@@ -108,4 +109,4 @@ private:
     }
 };
 
-#endif // BITCOIN_UNORDERED_LRU_CACHE_H
+#endif // THOUGHT_UNORDERED_LRU_CACHE_H

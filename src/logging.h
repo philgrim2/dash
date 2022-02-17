@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_LOGGING_H
-#define BITCOIN_LOGGING_H
+#ifndef THOUGHT_LOGGING_H
+#define THOUGHT_LOGGING_H
 
 #include <fs.h>
 #include <tinyformat.h>
@@ -158,4 +159,4 @@ fs::path GetDebugLogPath();
 bool OpenDebugLog();
 void ShrinkDebugFile();
 
-#endif // BITCOIN_LOGGING_H
+#endif // THOUGHT_LOGGING_H
