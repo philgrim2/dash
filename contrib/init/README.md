@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: dashd.service
-Upstart: dashd.conf
-OpenRC:  dashd.openrc
-         dashd.openrcconf
-CentOS:  dashd.init
-OS X:    org.dash.dashd.plist
+SystemD: thoughtd.service
+Upstart: thoughtd.conf
+OpenRC:  thoughtd.openrc
+         thoughtd.openrcconf
+CentOS:  thoughtd.init
+OS X:    live.thought.thoughtd.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

@@ -1,0 +1,92 @@
+#!/sbin/openrc-run
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/thoughtcore/.thoughtcore" ]; then
+	THOUGHTD_DEFAULT_DATADIR="/var/lib/thoughtcore/.thoughtcore"
+else
+	THOUGHTD_DEFAULT_DATADIR="/var/lib/thoughtd"
+fi
+
+THOUGHTD_CONFIGFILE=${THOUGHTD_CONFIGFILE:-/etc/thoughtcore/thought.conf}
+THOUGHTD_PIDDIR=${THOUGHTD_PIDDIR:-/var/run/thoughtd}
+THOUGHTD_PIDFILE=${THOUGHTD_PIDFILE:-${THOUGHTD_PIDDIR}/thoughtd.pid}
+THOUGHTD_DATADIR=${THOUGHTD_DATADIR:-${THOUGHTD_DEFAULT_DATADIR}}
+THOUGHTD_USER=${THOUGHTD_USER:-${THOUGHT_USER:-thoughtcore}}
+THOUGHTD_GROUP=${THOUGHTD_GROUP:-thoughtcore}
+THOUGHTD_BIN=${THOUGHTD_BIN:-/usr/bin/thoughtd}
+THOUGHTD_NICE=${THOUGHTD_NICE:-${NICELEVEL:-0}}
+THOUGHTD_OPTS="${THOUGHTD_OPTS:-${THOUGHT_OPTS}}"
+
+name="Dash Core Daemon"
+description="Dash cryptocurrency P2P network daemon"
+
+command="/usr/bin/thoughtd"
+command_args="-pid=\"${THOUGHTD_PIDFILE}\" \
+		-conf=\"${THOUGHTD_CONFIGFILE}\" \
+		-datadir=\"${THOUGHTD_DATADIR}\" \
+		-daemon \
+		${THOUGHTD_OPTS}"
+
+required_files="${THOUGHTD_CONFIGFILE}"
+start_stop_daemon_args="-u ${THOUGHTD_USER} \
+			-N ${THOUGHTD_NICE} -w 2000"
+pidfile="${THOUGHTD_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${THOUGHTD_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${THOUGHTD_USER}:${THOUGHTD_GROUP}" \
+	"${THOUGHTD_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${THOUGHTD_USER}:${THOUGHTD_GROUP}" \
+	"${THOUGHTD_PIDDIR}"
+
+	checkpath -f \
+	-o ${THOUGHTD_USER}:${THOUGHTD_GROUP} \
+	-m 0660 \
+	${THOUGHTD_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${THOUGHTD_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run thoughtd."
+		eerror "The setting must appear in ${THOUGHTD_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"Dash Core Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

@@ -1,0 +1,33 @@
+# /etc/conf.d/thoughtd: config file for /etc/init.d/thoughtd
+
+# Config file location
+#THOUGHTD_CONFIGFILE="/etc/thoughtcore/thought.conf"
+
+# What directory to write pidfile to?  (created and owned by $THOUGHTD_USER)
+#THOUGHTD_PIDDIR="/var/run/thoughtd"
+
+# What filename to give the pidfile
+#THOUGHTD_PIDFILE="${THOUGHTD_PIDDIR}/thoughtd.pid"
+
+# Where to write thoughtd data (be mindful that the blockchain is large)
+#THOUGHTD_DATADIR="/var/lib/thoughtd"
+
+# User and group to own thoughtd process
+#THOUGHTD_USER="thoughtcore"
+#THOUGHTD_GROUP="thoughtcore"
+
+# Path to thoughtd executable
+#THOUGHTD_BIN="/usr/bin/thoughtd"
+
+# Nice value to run thoughtd under
+#THOUGHTD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#THOUGHTD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for thoughtd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+THOUGHTD_SIGTERM_TIMEOUT=60
