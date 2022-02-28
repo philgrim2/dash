@@ -13,7 +13,7 @@ endif
 
 export PYTHONPATH
 
-if BUILD_BITCOIN_LIBS
+if BUILD_THOUGHT_LIBS
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = libthoughtconsensus.pc
 endif
