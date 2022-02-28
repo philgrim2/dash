@@ -1,9 +1,10 @@
 // Copyright (c) 2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
-#define BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
+#ifndef THOUGHT_ZMQ_ZMQPUBLISHNOTIFIER_H
+#define THOUGHT_ZMQ_ZMQPUBLISHNOTIFIER_H
 
 #include <zmq/zmqabstractnotifier.h>
 
@@ -137,4 +138,4 @@ class CZMQPublishRawRecoveredSigNotifier : public CZMQAbstractPublishNotifier
 public:
     bool NotifyRecoveredSig(const std::shared_ptr<const llmq::CRecoveredSig> &sig) override;
 };
-#endif // BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
+#endif // THOUGHT_ZMQ_ZMQPUBLISHNOTIFIER_H
