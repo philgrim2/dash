@@ -291,7 +291,7 @@ public:
         std::pair<bool,std::string> found_result(false, std::string());
 
         // We pass "true" to GetArgHelper in order to return the last
-        // argument value seen from the command line (so "dashd -foo=bar
+        // argument value seen from the command line (so "thoughtd -foo=bar
         // -foo=baz" gives GetArg(am,"foo")=={true,"baz"}
         found_result = GetArgHelper(am.m_override_args, arg, true);
         if (found_result.first) {
@@ -665,7 +665,7 @@ fs::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\DashCore
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\DashCore
     // Mac: ~/Library/Application Support/DashCore
-    // Unix: ~/.dashcore
+    // Unix: ~/.thoughtcore
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "DashCore";
@@ -681,7 +681,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/DashCore";
 #else
     // Unix
-    return pathRet / ".dashcore";
+    return pathRet / ".thoughtcore";
 #endif
 #endif
 }
@@ -807,7 +807,7 @@ void ArgsManager::ReadConfigFile(const std::string& confPath)
     if (stream.good()) {
         ReadConfigStream(stream);
     } else {
-        // Create an empty dash.conf if it does not excist
+        // Create an empty thought.conf if it does not excist
         FILE* configFile = fopen(GetConfigFile(confPath).string().c_str(), "a");
         if (configFile != nullptr)
             fclose(configFile);
@@ -850,7 +850,7 @@ std::string ArgsManager::GetDevNetName() const
 #ifndef WIN32
 fs::path GetPidFile()
 {
-    return AbsPathForConfigVal(fs::path(gArgs.GetArg("-pid", BITCOIN_PID_FILENAME)));
+    return AbsPathForConfigVal(fs::path(gArgs.GetArg("-pid", THOUGHT_PID_FILENAME)));
 }
 
 void CreatePidFile(const fs::path &path, pid_t pid)

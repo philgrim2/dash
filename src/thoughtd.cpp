@@ -1,11 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/dash-config.h>
+#include <config/thought-config.h>
 #endif
 
 #include <chainparams.h>
@@ -30,8 +31,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Dash (https://www.dash.org/),
- * which enables instant payments to anyone, anywhere in the world. Dash uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called Thought (https://www.thought.live/),
+ * which enables instant payments to anyone, anywhere in the world. Thought uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -60,7 +61,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/dash.conf are parsed in qt/dash.cpp's main()
+    // If Qt is used, parameters/thought.conf are parsed in qt/thought.cpp's main()
     SetupServerArgs();
 #if HAVE_DECL_DAEMON
     gArgs.AddArg("-daemon", "Run in the background as a daemon and accept commands", false, OptionsCategory::OPTIONS);
@@ -84,7 +85,7 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\nUsage:\n"
-                  "  dashd [options]                     " + strprintf("Start %s Daemon", PACKAGE_NAME) + "\n";
+                  "  thoughtd [options]                     " + strprintf("Start %s Daemon", PACKAGE_NAME) + "\n";
 
             strUsage += "\n" + gArgs.GetHelpMessage();
         }
@@ -103,7 +104,7 @@ bool AppInit(int argc, char* argv[])
         }
         try
         {
-            gArgs.ReadConfigFile(gArgs.GetArg("-conf", BITCOIN_CONF_FILENAME));
+            gArgs.ReadConfigFile(gArgs.GetArg("-conf", THOUGHT_CONF_FILENAME));
         } catch (const std::exception& e) {
             fprintf(stderr,"Error reading configuration file: %s\n", e.what());
             return false;
@@ -124,12 +125,12 @@ bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
-                fprintf(stderr, "Error: Command line contains unexpected token '%s', see dashd -h for a list of options.\n", argv[i]);
+                fprintf(stderr, "Error: Command line contains unexpected token '%s', see thoughtd -h for a list of options.\n", argv[i]);
                 return false;
             }
         }
 
-        // -server defaults to true for dashd but not for the GUI so do this here
+        // -server defaults to true for thoughtd but not for the GUI so do this here
         gArgs.SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging();
@@ -200,7 +201,7 @@ int main(int argc, char* argv[])
 
     SetupEnvironment();
 
-    // Connect dashd signal handlers
+    // Connect thoughtd signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);
