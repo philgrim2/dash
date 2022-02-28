@@ -1,4 +1,5 @@
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -699,8 +700,8 @@ UniValue masternodelist(const JSONRPCRequest& request)
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         argNames
   //  --------------------- ------------------------  -----------------------  ----------
-    { "dash",               "masternode",             &masternode,             {} },
-    { "dash",               "masternodelist",         &masternodelist,         {} },
+    { "thought",               "masternode",             &masternode,             {} },
+    { "thought",               "masternodelist",         &masternodelist,         {} },
 };
 
 void RegisterMasternodeRPCCommands(CRPCTable &t)

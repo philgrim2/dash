@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2016 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_REGISTER_H
-#define BITCOIN_RPC_REGISTER_H
+#ifndef THOUGHT_RPC_REGISTER_H
+#define THOUGHT_RPC_REGISTER_H
 
 /** These are in one header file to avoid creating tons of single-function
  * headers for everything under src/rpc/ */
@@ -44,4 +45,4 @@ static inline void RegisterAllCoreRPCCommands(CRPCTable &t)
     RegisterQuorumsRPCCommands(t);
 }
 
-#endif // BITCOIN_RPC_REGISTER_H
+#endif // THOUGHT_RPC_REGISTER_H

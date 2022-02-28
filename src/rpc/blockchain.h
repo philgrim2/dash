@@ -1,9 +1,10 @@
 // Copyright (c) 2017 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_BLOCKCHAIN_H
-#define BITCOIN_RPC_BLOCKCHAIN_H
+#ifndef THOUGHT_RPC_BLOCKCHAIN_H
+#define THOUGHT_RPC_BLOCKCHAIN_H
 
 class CBlock;
 class CBlockIndex;

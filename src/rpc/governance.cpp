@@ -1,4 +1,5 @@
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -392,7 +393,7 @@ void gobject_vote_conf_help()
 {
     throw std::runtime_error(
                 "gobject vote-conf <governance-hash> <vote> <vote-outcome>\n"
-                "Vote on a governance object by masternode configured in dash.conf\n"
+                "Vote on a governance object by masternode configured in thought.conf\n"
                 "\nArguments:\n"
                 "1. governance-hash   (string, required) hash of the governance object\n"
                 "2. vote              (string, required) vote, possible values: [funding|valid|delete|endorsed]\n"
@@ -447,7 +448,7 @@ UniValue gobject_vote_conf(const JSONRPCRequest& request)
         nFailed++;
         statusObj.pushKV("result", "failed");
         statusObj.pushKV("errorMessage", "Can't find masternode by collateral output");
-        resultsObj.pushKV("dash.conf", statusObj);
+        resultsObj.pushKV("thought.conf", statusObj);
         returnObj.pushKV("overall", strprintf("Voted successfully %d time(s) and failed %d time(s).", nSuccessful, nFailed));
         returnObj.pushKV("detail", resultsObj);
         return returnObj;
@@ -467,7 +468,7 @@ UniValue gobject_vote_conf(const JSONRPCRequest& request)
         nFailed++;
         statusObj.pushKV("result", "failed");
         statusObj.pushKV("errorMessage", "Failure to sign.");
-        resultsObj.pushKV("dash.conf", statusObj);
+        resultsObj.pushKV("thought.conf", statusObj);
         returnObj.pushKV("overall", strprintf("Voted successfully %d time(s) and failed %d time(s).", nSuccessful, nFailed));
         returnObj.pushKV("detail", resultsObj);
         return returnObj;
@@ -483,7 +484,7 @@ UniValue gobject_vote_conf(const JSONRPCRequest& request)
         statusObj.pushKV("errorMessage", exception.GetMessage());
     }
 
-    resultsObj.pushKV("dash.conf", statusObj);
+    resultsObj.pushKV("thought.conf", statusObj);
 
     returnObj.pushKV("overall", strprintf("Voted successfully %d time(s) and failed %d time(s).", nSuccessful, nFailed));
     returnObj.pushKV("detail", resultsObj);
@@ -951,7 +952,7 @@ UniValue gobject_getcurrentvotes(const JSONRPCRequest& request)
 #ifdef ENABLE_WALLET
             "  vote-alias         - Vote on a governance object by masternode proTxHash\n"
 #endif // ENABLE_WALLET
-            "  vote-conf          - Vote on a governance object by masternode configured in dash.conf\n"
+            "  vote-conf          - Vote on a governance object by masternode configured in thought.conf\n"
 #ifdef ENABLE_WALLET
             "  vote-many          - Vote on a governance object by all masternodes for which the voting key is in the wallet\n"
 #endif // ENABLE_WALLET
@@ -1151,10 +1152,10 @@ static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         argNames
   //  --------------------- ------------------------  -----------------------  ----------
     /* Dash features */
-    { "dash",               "getgovernanceinfo",      &getgovernanceinfo,      {} },
-    { "dash",               "getsuperblockbudget",    &getsuperblockbudget,    {"index"} },
-    { "dash",               "gobject",                &gobject,                {} },
-    { "dash",               "voteraw",                &voteraw,                {"tx_hash","tx_index","gov_hash","signal","outcome","time","sig"} },
+    { "thought",               "getgovernanceinfo",      &getgovernanceinfo,      {} },
+    { "thought",               "getsuperblockbudget",    &getsuperblockbudget,    {"index"} },
+    { "thought",               "gobject",                &gobject,                {} },
+    { "thought",               "voteraw",                &voteraw,                {"tx_hash","tx_index","gov_hash","signal","outcome","time","sig"} },
 
 };
 
