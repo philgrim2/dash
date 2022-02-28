@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TEST_SCRIPTNUM10_H
-#define BITCOIN_TEST_SCRIPTNUM10_H
+#ifndef THOUGHT_TEST_SCRIPTNUM10_H
+#define THOUGHT_TEST_SCRIPTNUM10_H
 
 #include <algorithm>
 #include <limits>
@@ -180,4 +181,4 @@ private:
 };
 
 
-#endif // BITCOIN_TEST_BIGNUM_H
+#endif // THOUGHT_TEST_BIGNUM_H

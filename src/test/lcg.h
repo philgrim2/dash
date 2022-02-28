@@ -1,9 +1,10 @@
 // Copyright (c) 2019 The Bitcoin developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TEST_LCG_H
-#define BITCOIN_TEST_LCG_H
+#ifndef THOUGHT_TEST_LCG_H
+#define THOUGHT_TEST_LCG_H
 
 #include <cstdint>
 
@@ -30,4 +31,4 @@ public:
     }
 };
 
-#endif // BITCOIN_TEST_LCG_H
+#endif // THOUGHT_TEST_LCG_H
