@@ -57,7 +57,7 @@
       <item>
        <widget class="QValidatedLineEdit" name="payTo">
         <property name="toolTip">
-         <string>The Dash address to send the payment to</string>
+         <string>The Thought address to send the payment to</string>
         </property>
        </widget>
       </item>
@@ -153,12 +153,12 @@
     <item row="2" column="1">
      <layout class="QHBoxLayout" name="horizontalLayoutAmount" stretch="0,1,0">
       <item>
-       <widget class="BitcoinAmountField" name="payAmount"/>
+       <widget class="ThoughtAmountField" name="payAmount"/>
       </item>
       <item>
        <widget class="QCheckBox" name="checkboxSubtractFeeFromAmount">
         <property name="toolTip">
-         <string>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Dash than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
+         <string>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Thought than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
         </property>
         <property name="text">
          <string>S&amp;ubtract fee from amount</string>
@@ -187,7 +187,7 @@
     <item row="3" column="1">
      <widget class="QLabel" name="messageTextLabel">
       <property name="toolTip">
-       <string>A message that was attached to the dash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dash network.</string>
+       <string>A message that was attached to the THT: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Thought network.</string>
       </property>
       <property name="textFormat">
        <enum>Qt::PlainText</enum>
@@ -693,7 +693,7 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="BitcoinAmountField" name="payAmount_is">
+     <widget class="ThoughtAmountField" name="payAmount_is">
       <property name="acceptDrops">
        <bool>false</bool>
       </property>
@@ -1222,7 +1222,7 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="BitcoinAmountField" name="payAmount_s">
+     <widget class="ThoughtAmountField" name="payAmount_s">
       <property name="acceptDrops">
        <bool>false</bool>
       </property>
@@ -1238,9 +1238,9 @@
    <header>qt/qvalidatedlineedit.h</header>
   </customwidget>
   <customwidget>
-   <class>BitcoinAmountField</class>
+   <class>ThoughtAmountField</class>
    <extends>QLineEdit</extends>
-   <header>qt/bitcoinamountfield.h</header>
+   <header>qt/thoughtamountfield.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
@@ -1256,7 +1256,7 @@
   <tabstop>deleteButton_s</tabstop>
  </tabstops>
  <resources>
-  <include location="../dash.qrc"/>
+  <include location="../thought.qrc"/>
  </resources>
  <connections/>
 </ui>
