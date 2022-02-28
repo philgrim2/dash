@@ -1,9 +1,10 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_BITCOINGUI_H
-#define BITCOIN_QT_BITCOINGUI_H
+#ifndef THOUGHT_QT_THOUGHTGUI_H
+#define THOUGHT_QT_THOUGHTGUI_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/dash-config.h>
@@ -378,4 +379,4 @@ private Q_SLOTS:
     void onMenuSelection(QAction* action);
 };
 
-#endif // BITCOIN_QT_BITCOINGUI_H
+#endif // THOUGHT_QT_THOUGHTGUI_H

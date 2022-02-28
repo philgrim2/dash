@@ -1,9 +1,10 @@
 // Copyright (c) 2011-2014 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_TRANSACTIONDESC_H
-#define BITCOIN_QT_TRANSACTIONDESC_H
+#ifndef THOUGHT_QT_TRANSACTIONDESC_H
+#define THOUGHT_QT_TRANSACTIONDESC_H
 
 #include <QObject>
 #include <QString>
@@ -32,4 +33,4 @@ private:
     static QString FormatTxStatus(const interfaces::WalletTx& wtx, const interfaces::WalletTxStatus& status, bool inMempool, int numBlocks, int64_t adjustedTime);
 };
 
-#endif // BITCOIN_QT_TRANSACTIONDESC_H
+#endif // THOUGHT_QT_TRANSACTIONDESC_H

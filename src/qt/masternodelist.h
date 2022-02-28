@@ -1,5 +1,9 @@
-#ifndef BITCOIN_QT_MASTERNODELIST_H
-#define BITCOIN_QT_MASTERNODELIST_H
+// Copyright (c) 2018-2022 Thought Network Ltd
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#ifndef THOUGHT_QT_MASTERNODELIST_H
+#define THOUGHT_QT_MASTERNODELIST_H
 
 #include <primitives/transaction.h>
 #include <sync.h>
@@ -90,4 +94,4 @@ private Q_SLOTS:
     void handleMasternodeListChanged();
     void updateDIP3ListScheduled();
 };
-#endif // BITCOIN_QT_MASTERNODELIST_H
+#endif // THOUGHT_QT_MASTERNODELIST_H

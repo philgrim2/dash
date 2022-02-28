@@ -1,5 +1,9 @@
-#ifndef BITCOIN_QT_TRAFFICGRAPHDATA_H
-#define BITCOIN_QT_TRAFFICGRAPHDATA_H
+// Copyright (c) 2018-2022 Thought Network Ltd
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#ifndef THOUGHT_QT_TRAFFICGRAPHDATA_H
+#define THOUGHT_QT_TRAFFICGRAPHDATA_H
 
 #include <QHash>
 #include <QQueue>
@@ -90,4 +94,4 @@ private:
     TrafficGraphData& operator=(TrafficGraphData const&);
 };
 
-#endif // BITCOIN_QT_TRAFFICGRAPHDATA_H
+#endif // THOUGHT_QT_TRAFFICGRAPHDATA_H

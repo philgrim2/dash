@@ -1,9 +1,10 @@
 // Copyright (c) 2011-2014 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_TRANSACTIONRECORD_H
-#define BITCOIN_QT_TRANSACTIONRECORD_H
+#ifndef THOUGHT_QT_TRANSACTIONRECORD_H
+#define THOUGHT_QT_TRANSACTIONRECORD_H
 
 #include <amount.h>
 #include <uint256.h>
@@ -172,4 +173,4 @@ public:
     void updateLabel(interfaces::Wallet& wallet);
 };
 
-#endif // BITCOIN_QT_TRANSACTIONRECORD_H
+#endif // THOUGHT_QT_TRANSACTIONRECORD_H

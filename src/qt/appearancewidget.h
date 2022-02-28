@@ -1,9 +1,10 @@
 // Copyright (c) 2020 The Dash Core developers
+// Copyright (c) 2020-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_APPEARANCEWIDGET_H
-#define BITCOIN_QT_APPEARANCEWIDGET_H
+#ifndef THOUGHT_QT_APPEARANCEWIDGET_H
+#define THOUGHT_QT_APPEARANCEWIDGET_H
 
 #include <QWidget>
 
@@ -56,4 +57,4 @@ private:
     void updateWeightSlider(bool fForce = false);
 };
 
-#endif // BITCOIN_QT_APPEARANCEWIDGET_H
+#endif // THOUGHT_QT_APPEARANCEWIDGET_H
