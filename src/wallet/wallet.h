@@ -1,11 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_WALLET_H
-#define BITCOIN_WALLET_WALLET_H
+#ifndef THOUGHT_WALLET_WALLET_H
+#define THOUGHT_WALLET_WALLET_H
 
 #include <amount.h>
 #include <policy/feerate.h>
@@ -1371,4 +1372,4 @@ public:
 // be IsAllFromMe).
 int64_t CalculateMaximumSignedTxSize(const CTransaction &tx, const CWallet *wallet);
 int64_t CalculateMaximumSignedTxSize(const CTransaction &tx, const CWallet *wallet, const std::vector<CTxOut>& txouts);
-#endif // BITCOIN_WALLET_WALLET_H
+#endif // THOUGHT_WALLET_WALLET_H

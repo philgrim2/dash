@@ -1,9 +1,10 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_COINCONTROL_H
-#define BITCOIN_WALLET_COINCONTROL_H
+#ifndef THOUGHT_WALLET_COINCONTROL_H
+#define THOUGHT_WALLET_COINCONTROL_H
 
 #include <key.h>
 #include <policy/feerate.h>
@@ -118,4 +119,4 @@ private:
     std::set<COutPoint> setSelected;
 };
 
-#endif // BITCOIN_WALLET_COINCONTROL_H
+#endif // THOUGHT_WALLET_COINCONTROL_H

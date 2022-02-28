@@ -99,8 +99,8 @@ bool fDisableGovernance = false;
 */
 int nWalletBackups = 10;
 
-const char * const BITCOIN_CONF_FILENAME = "dash.conf";
-const char * const BITCOIN_PID_FILENAME = "dashd.pid";
+const char * const THOUGHT_CONF_FILENAME = "thought.conf";
+const char * const THOUGHT_PID_FILENAME = "thoughtd.pid";
 
 ArgsManager gArgs;
 

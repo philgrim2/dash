@@ -1,9 +1,10 @@
 // Copyright (c) 2016 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_RPCWALLET_H
-#define BITCOIN_WALLET_RPCWALLET_H
+#ifndef THOUGHT_WALLET_RPCWALLET_H
+#define THOUGHT_WALLET_RPCWALLET_H
 
 #include <string>
 
@@ -28,4 +29,4 @@ bool EnsureWalletIsAvailable(CWallet *, bool avoidException);
 
 UniValue getaddressinfo(const JSONRPCRequest& request);
 UniValue signrawtransactionwithwallet(const JSONRPCRequest& request);
-#endif //BITCOIN_WALLET_RPCWALLET_H
+#endif //THOUGHT_WALLET_RPCWALLET_H

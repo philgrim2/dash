@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 #
 # Copyright (c) 2018 The Bitcoin Core developers
+# Copyright (c) 2018-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
 # Check include guards.
 
 export LC_ALL=C
-HEADER_ID_PREFIX="BITCOIN_"
+HEADER_ID_PREFIX="THOUGHT_"
 HEADER_ID_SUFFIX="_H"
 
 REGEXP_EXCLUDE_FILES_WITH_PREFIX="src/(crypto/ctaes/|leveldb/|secp256k1/|tinyformat.h|univalue/|ctpl.h|bls/|crypto/sph)"
