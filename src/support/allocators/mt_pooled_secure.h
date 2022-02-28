@@ -1,9 +1,10 @@
 // Copyright (c) 2014-2020 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
-#define BITCOIN_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
+#ifndef THOUGHT_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
+#define THOUGHT_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
 
 #include <support/allocators/pooled_secure.h>
 

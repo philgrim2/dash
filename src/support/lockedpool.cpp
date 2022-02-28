@@ -1,4 +1,5 @@
 // Copyright (c) 2016 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +7,7 @@
 #include <support/cleanse.h>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/dash-config.h>
+#include <config/thought-config.h>
 #endif
 
 #ifdef WIN32

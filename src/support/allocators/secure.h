@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SUPPORT_ALLOCATORS_SECURE_H
-#define BITCOIN_SUPPORT_ALLOCATORS_SECURE_H
+#ifndef THOUGHT_SUPPORT_ALLOCATORS_SECURE_H
+#define THOUGHT_SUPPORT_ALLOCATORS_SECURE_H
 
 #include <support/lockedpool.h>
 #include <support/cleanse.h>
@@ -58,4 +59,4 @@ typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> >
 
 typedef std::vector<unsigned char, secure_allocator<unsigned char> > SecureVector;
 
-#endif // BITCOIN_SUPPORT_ALLOCATORS_SECURE_H
+#endif // THOUGHT_SUPPORT_ALLOCATORS_SECURE_H
