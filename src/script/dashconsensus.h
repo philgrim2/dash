@@ -1,14 +1,15 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SCRIPT_DASHCONSENSUS_H
-#define BITCOIN_SCRIPT_DASHCONSENSUS_H
+#ifndef THOUGHT_SCRIPT_DASHCONSENSUS_H
+#define THOUGHT_SCRIPT_DASHCONSENSUS_H
 
 #include <stdint.h>
 
-#if defined(BUILD_BITCOIN_INTERNAL) && defined(HAVE_CONFIG_H)
+#if defined(BUILD_THOUGHT_INTERNAL) && defined(HAVE_CONFIG_H)
 #include <config/dash-config.h>
   #if defined(_WIN32)
     #if defined(DLL_EXPORT)
@@ -21,7 +22,7 @@
   #elif defined(HAVE_FUNC_ATTRIBUTE_VISIBILITY)
     #define EXPORT_SYMBOL __attribute__ ((visibility ("default")))
   #endif
-#elif defined(MSC_VER) && !defined(STATIC_LIBBITCOINCONSENSUS)
+#elif defined(MSC_VER) && !defined(STATIC_LIBTHOUGHTCONSENSUS)
   #define EXPORT_SYMBOL __declspec(dllimport)
 #endif
 
@@ -33,7 +34,7 @@
 extern "C" {
 #endif
 
-#define BITCOINCONSENSUS_API_VER 0
+#define THOUGHTCONSENSUS_API_VER 0
 
 typedef enum dashconsensus_error_t
 {
@@ -74,4 +75,4 @@ EXPORT_SYMBOL unsigned int dashconsensus_version();
 
 #undef EXPORT_SYMBOL
 
-#endif // BITCOIN_SCRIPT_DASHCONSENSUS_H
+#endif // THOUGHT_SCRIPT_DASHCONSENSUS_H
