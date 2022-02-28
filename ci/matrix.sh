@@ -9,7 +9,7 @@ export BUILD_TARGET=${BUILD_TARGET:-linux64}
 export PULL_REQUEST=${PULL_REQUEST:-false}
 export JOB_NUMBER=${JOB_NUMBER:-1}
 
-export BUILDER_IMAGE_NAME="dash-builder-$BUILD_TARGET-$JOB_NUMBER"
+export BUILDER_IMAGE_NAME="thought-builder-$BUILD_TARGET-$JOB_NUMBER"
 
 export HOST_SRC_DIR=${HOST_SRC_DIR:-$(pwd)}
 export HOST_CACHE_DIR=${HOST_CACHE_DIR:-$(pwd)/ci-cache-$BUILD_TARGET}
@@ -39,30 +39,30 @@ if [ "$BUILD_TARGET" = "arm-linux" ]; then
   export CHECK_DOC=1
   # -Wno-psabi is to disable ABI warnings: "note: parameter passing for argument of type ... changed in GCC 7.1"
   # This could be removed once the ABI change warning does not show up by default
-  export BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports CXXFLAGS=-Wno-psabi"
+  export THOUGHT_CONFIG="--enable-glibc-back-compat --enable-reduce-exports CXXFLAGS=-Wno-psabi"
 elif [ "$BUILD_TARGET" = "win32" ]; then
   export HOST=i686-w64-mingw32
   export DPKG_ADD_ARCH="i386"
-  export BITCOIN_CONFIG="--enable-gui --enable-reduce-exports --disable-miner"
+  export THOUGHT_CONFIG="--enable-gui --enable-reduce-exports --disable-miner"
   export DIRECT_WINE_EXEC_TESTS=true
   export RUN_UNITTESTS=true
 elif [ "$BUILD_TARGET" = "win64" ]; then
   export HOST=x86_64-w64-mingw32
   export DPKG_ADD_ARCH="i386"
-  export BITCOIN_CONFIG="--enable-gui --enable-reduce-exports --disable-miner"
+  export THOUGHT_CONFIG="--enable-gui --enable-reduce-exports --disable-miner"
   export DIRECT_WINE_EXEC_TESTS=true
   export RUN_UNITTESTS=true
 elif [ "$BUILD_TARGET" = "linux32" ]; then
   export HOST=i686-pc-linux-gnu
-  export BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports --enable-crash-hooks LDFLAGS=-static-libstdc++"
-  export USE_SHELL="/bin/dash"
+  export THOUGHT_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports --enable-crash-hooks LDFLAGS=-static-libstdc++"
+  export USE_SHELL="/bin/bash"
   export PYZMQ=true
   export RUN_UNITTESTS=true
   export RUN_INTEGRATIONTESTS=true
 elif [ "$BUILD_TARGET" = "linux64" ]; then
   export HOST=x86_64-unknown-linux-gnu
   export DEP_OPTS="NO_UPNP=1 DEBUG=1"
-  export BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports --enable-crash-hooks"
+  export THOUGHT_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports --enable-crash-hooks"
   export CPPFLAGS="-DDEBUG_LOCKORDER -DENABLE_DASH_DEBUG -DARENA_DEBUG"
   export PYZMQ=true
   export RUN_UNITTESTS=true
@@ -70,17 +70,17 @@ elif [ "$BUILD_TARGET" = "linux64" ]; then
 elif [ "$BUILD_TARGET" = "linux64_nowallet" ]; then
   export HOST=x86_64-unknown-linux-gnu
   export DEP_OPTS="NO_WALLET=1"
-  export BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
+  export THOUGHT_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
   export RUN_UNITTESTS=true
 elif [ "$BUILD_TARGET" = "linux64_release" ]; then
   export HOST=x86_64-unknown-linux-gnu
   export DEP_OPTS="NO_UPNP=1"
-  export BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports"
+  export THOUGHT_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports"
   export PYZMQ=true
   export RUN_UNITTESTS=true
 elif [ "$BUILD_TARGET" = "mac" ]; then
   export HOST=x86_64-apple-darwin14
-  export BITCOIN_CONFIG="--enable-gui --enable-reduce-exports --disable-miner"
+  export THOUGHT_CONFIG="--enable-gui --enable-reduce-exports --disable-miner"
   export OSX_SDK=10.11
   export GOAL="all deploy"
 fi
