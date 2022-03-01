@@ -1,11 +1,12 @@
 // Copyright (c) 2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 //
 // C++ wrapper around ctaes, a constant-time AES implementation
 
-#ifndef BITCOIN_CRYPTO_AES_H
-#define BITCOIN_CRYPTO_AES_H
+#ifndef THOUGHT_CRYPTO_AES_H
+#define THOUGHT_CRYPTO_AES_H
 
 extern "C" {
 #include <crypto/ctaes/ctaes.h>
@@ -115,4 +116,4 @@ private:
     unsigned char iv[AES_BLOCKSIZE];
 };
 
-#endif // BITCOIN_CRYPTO_AES_H
+#endif // THOUGHT_CRYPTO_AES_H
