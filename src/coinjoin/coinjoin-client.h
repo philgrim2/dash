@@ -1,9 +1,10 @@
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_COINJOIN_COINJOIN_CLIENT_H
-#define BITCOIN_COINJOIN_COINJOIN_CLIENT_H
+#ifndef THOUGHT_COINJOIN_COINJOIN_CLIENT_H
+#define THOUGHT_COINJOIN_COINJOIN_CLIENT_H
 
 #include <coinjoin/coinjoin-util.h>
 #include <coinjoin/coinjoin.h>
@@ -248,4 +249,4 @@ public:
 
 void DoCoinJoinMaintenance(CConnman& connman);
 
-#endif // BITCOIN_COINJOIN_COINJOIN_CLIENT_H
+#endif // THOUGHT_COINJOIN_COINJOIN_CLIENT_H
