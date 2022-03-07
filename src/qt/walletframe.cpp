@@ -1,4 +1,5 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +15,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 
-WalletFrame::WalletFrame(BitcoinGUI* _gui) :
+WalletFrame::WalletFrame(ThoughtGUI* _gui) :
     QFrame(_gui),
     gui(_gui)
 {
@@ -51,7 +52,7 @@ bool WalletFrame::addWallet(WalletModel *walletModel)
     }
 
     WalletView* walletView = new WalletView(this);
-    walletView->setBitcoinGUI(gui);
+    walletView->setThoughtGUI(gui);
     walletView->setClientModel(clientModel);
     walletView->setWalletModel(walletModel);
     walletView->showOutOfSyncWarning(bOutOfSync);

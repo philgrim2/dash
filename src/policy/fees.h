@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCOIN_POLICY_FEES_H
-#define BITCOIN_POLICY_FEES_H
+#ifndef THOUGHT_POLICY_FEES_H
+#define THOUGHT_POLICY_FEES_H
 
 #include <amount.h>
 #include <policy/feerate.h>
@@ -273,4 +274,4 @@ private:
     unsigned int MaxUsableEstimate() const;
 };
 
-#endif // BITCOIN_POLICY_FEES_H
+#endif // THOUGHT_POLICY_FEES_H

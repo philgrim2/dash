@@ -1,9 +1,10 @@
 // Copyright (c) 2011-2014 The Bitcoin Core developers
 // Copyright (c) 2014-2020 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/bitcoinaddressvalidator.h>
+#include <qt/thoughtaddressvalidator.h>
 #include <qt/guiutil.h>
 
 #include <key_io.h>
@@ -17,12 +18,12 @@
   - All lower-case letters except for 'l'
 */
 
-BitcoinAddressEntryValidator::BitcoinAddressEntryValidator(QObject *parent, bool fAllowURI) :
+ThoughtAddressEntryValidator::ThoughtAddressEntryValidator(QObject *parent, bool fAllowURI) :
     QValidator(parent), fAllowURI(fAllowURI)
 {
 }
 
-QValidator::State BitcoinAddressEntryValidator::validate(QString &input, int &pos) const
+QValidator::State ThoughtAddressEntryValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
 
@@ -30,7 +31,7 @@ QValidator::State BitcoinAddressEntryValidator::validate(QString &input, int &po
     if (input.isEmpty())
         return QValidator::Intermediate;
 
-    if (fAllowURI && GUIUtil::validateBitcoinURI(input)) {
+    if (fAllowURI && GUIUtil::validateThoughtURI(input)) {
         return QValidator::Acceptable;
     }
 
@@ -86,12 +87,12 @@ QValidator::State BitcoinAddressEntryValidator::validate(QString &input, int &po
     return state;
 }
 
-BitcoinAddressCheckValidator::BitcoinAddressCheckValidator(QObject *parent) :
+ThoughtAddressCheckValidator::ThoughtAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State BitcoinAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State ThoughtAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
     // Validate the passed Dash address

@@ -75,7 +75,7 @@ void SendCoinsEntry::on_addressBookButton_clicked()
 void SendCoinsEntry::on_payTo_textChanged(const QString &address)
 {
     SendCoinsRecipient rcp;
-    if (GUIUtil::parseBitcoinURI(address, &rcp)) {
+    if (GUIUtil::parseThoughtURI(address, &rcp)) {
         ui->payTo->blockSignals(true);
         setValue(rcp);
         ui->payTo->blockSignals(false);

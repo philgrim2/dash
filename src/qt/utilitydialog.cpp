@@ -203,7 +203,7 @@ ShutdownWindow::ShutdownWindow(interfaces::Node& node, QWidget *parent, Qt::Wind
     GUIUtil::updateFonts();
 }
 
-QWidget *ShutdownWindow::showShutdownWindow(interfaces::Node& node, BitcoinGUI *window)
+QWidget *ShutdownWindow::showShutdownWindow(interfaces::Node& node, ThoughtGUI *window)
 {
     if (!window)
         return nullptr;

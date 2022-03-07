@@ -71,4 +71,4 @@ private:
     boost::pool<internal_secure_allocator> pool;
 };
 
-#endif // BITCOIN_SUPPORT_ALLOCATORS_POOLED_SECURE_H
+#endif // THOUGHT_SUPPORT_ALLOCATORS_POOLED_SECURE_H

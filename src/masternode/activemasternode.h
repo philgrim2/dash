@@ -1,9 +1,10 @@
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_MASTERNODE_ACTIVEMASTERNODE_H
-#define BITCOIN_MASTERNODE_ACTIVEMASTERNODE_H
+#ifndef THOUGHT_MASTERNODE_ACTIVEMASTERNODE_H
+#define THOUGHT_MASTERNODE_ACTIVEMASTERNODE_H
 
 #include <chainparams.h>
 #include <key.h>
@@ -63,4 +64,4 @@ private:
     bool GetLocalAddress(CService& addrRet);
 };
 
-#endif // BITCOIN_MASTERNODE_ACTIVEMASTERNODE_H
+#endif // THOUGHT_MASTERNODE_ACTIVEMASTERNODE_H

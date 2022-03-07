@@ -1,9 +1,10 @@
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_MASTERNODE_MASTERNODE_META_H
-#define BITCOIN_MASTERNODE_MASTERNODE_META_H
+#ifndef THOUGHT_MASTERNODE_MASTERNODE_META_H
+#define THOUGHT_MASTERNODE_MASTERNODE_META_H
 
 #include <serialize.h>
 
@@ -158,4 +159,4 @@ public:
 
 extern CMasternodeMetaMan mmetaman;
 
-#endif // BITCOIN_MASTERNODE_MASTERNODE_META_H
+#endif // THOUGHT_MASTERNODE_MASTERNODE_META_H

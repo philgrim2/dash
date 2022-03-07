@@ -12,7 +12,7 @@
 #include <QWidget>
 
 class AmountLineEdit;
-class BitcoinUnits;
+class ThoughtUnits;
 
 QT_BEGIN_NAMESPACE
 class QValueComboBox;
@@ -20,7 +20,7 @@ QT_END_NAMESPACE
 
 /** Widget for entering bitcoin amounts.
   */
-class BitcoinAmountField: public QWidget
+class ThoughtAmountField: public QWidget
 {
     Q_OBJECT
 
@@ -29,7 +29,7 @@ class BitcoinAmountField: public QWidget
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
 
 public:
-    explicit BitcoinAmountField(QWidget *parent = 0);
+    explicit ThoughtAmountField(QWidget *parent = 0);
 
     CAmount value(bool *value=0) const;
     void setValue(const CAmount& value);
@@ -65,9 +65,9 @@ protected:
 
 private:
     AmountLineEdit *amount;
-    BitcoinUnits *units;
+    ThoughtUnits *units;
 
     void unitChanged(int idx);
 };
 
-#endif // THOUGHT_QT_BITCOINAMOUNTFIELD_H
+#endif // THOUGHT_QT_THOUGHTAMOUNTFIELD_H

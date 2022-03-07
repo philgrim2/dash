@@ -1,8 +1,9 @@
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCOIN_MASTERNODE_MASTERNODE_SYNC_H
-#define BITCOIN_MASTERNODE_MASTERNODE_SYNC_H
+#ifndef THOUGHT_MASTERNODE_MASTERNODE_SYNC_H
+#define THOUGHT_MASTERNODE_MASTERNODE_SYNC_H
 
 #include <chain.h>
 #include <net.h>
@@ -16,7 +17,7 @@ static const int MASTERNODE_SYNC_GOVOBJ_VOTE     = 11;
 static const int MASTERNODE_SYNC_FINISHED        = 999;
 
 static const int MASTERNODE_SYNC_TICK_SECONDS    = 6;
-static const int MASTERNODE_SYNC_TIMEOUT_SECONDS = 30; // our blocks are 2.5 minutes so 30 seconds should be fine
+static const int MASTERNODE_SYNC_TIMEOUT_SECONDS = 30; // our blocks are 1.617 minutes so 30 seconds should be fine
 static const int MASTERNODE_SYNC_RESET_SECONDS = 600; // Reset fReachedBestHeader in CMasternodeSync::Reset if UpdateBlockTip hasn't been called for this seconds
 
 extern CMasternodeSync masternodeSync;
@@ -71,4 +72,4 @@ public:
     void DoMaintenance(CConnman &connman);
 };
 
-#endif // BITCOIN_MASTERNODE_MASTERNODE_SYNC_H
+#endif // THOUGHT_MASTERNODE_MASTERNODE_SYNC_H

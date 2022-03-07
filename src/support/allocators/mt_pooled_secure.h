@@ -83,4 +83,4 @@ private:
     std::vector<std::unique_ptr<internal_pool>> pools;
 };
 
-#endif // BITCOIN_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
+#endif // THOUGHT_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H

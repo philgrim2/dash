@@ -46,22 +46,22 @@
 /** Dash unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class BitcoinUnits: public QAbstractListModel
+class ThoughtUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit BitcoinUnits(QObject *parent);
+    explicit ThoughtUnits(QObject *parent);
 
     /** Dash units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
-        DASH,
-        mDASH,
-        uDASH,
-        duffs
+        THT,
+        mTHT,
+        uTHT,
+        notions
     };
 
     enum SeparatorStyle
@@ -129,8 +129,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<BitcoinUnits::Unit> unitlist;
+    QList<ThoughtUnits::Unit> unitlist;
 };
-typedef BitcoinUnits::Unit BitcoinUnit;
+typedef ThoughtUnits::Unit ThoughtUnit;
 
 #endif // THOUGHT_QT_THOUGHTUNITS_H

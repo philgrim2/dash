@@ -9,7 +9,7 @@
 #include <QDialog>
 #include <QObject>
 
-class BitcoinGUI;
+class ThoughtGUI;
 
 namespace interfaces {
     class Node;
@@ -53,7 +53,7 @@ class ShutdownWindow : public QWidget
 
 public:
     explicit ShutdownWindow(interfaces::Node& node, QWidget *parent=0, Qt::WindowFlags f=0);
-    static QWidget *showShutdownWindow(interfaces::Node& node, BitcoinGUI *window);
+    static QWidget *showShutdownWindow(interfaces::Node& node, ThoughtGUI *window);
 
 protected:
     void closeEvent(QCloseEvent *event);

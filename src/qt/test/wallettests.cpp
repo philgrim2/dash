@@ -1,3 +1,7 @@
+// Copyright (c) 2018-2022 Thought Network Ltd
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 #include <qt/test/wallettests.h>
 
 #include <coinjoin/coinjoin-client.h>
@@ -74,7 +78,7 @@ uint256 SendCoins(CWallet& wallet, SendCoinsDialog& sendCoinsDialog, const CTxDe
     QVBoxLayout* entries = sendCoinsDialog.findChild<QVBoxLayout*>("entries");
     SendCoinsEntry* entry = qobject_cast<SendCoinsEntry*>(entries->itemAt(0)->widget());
     entry->findChild<QValidatedLineEdit*>("payTo")->setText(QString::fromStdString(EncodeDestination(address)));
-    entry->findChild<BitcoinAmountField*>("payAmount")->setValue(amount);
+    entry->findChild<ThoughtAmountField*>("payAmount")->setValue(amount);
     uint256 txid;
     boost::signals2::scoped_connection c(wallet.NotifyTransactionChanged.connect([&txid](CWallet*, const uint256& hash, ChangeType status) {
         if (status == CT_NEW) txid = hash;
@@ -162,7 +166,7 @@ void TestGUI()
     QString balanceText = balanceLabel->text();
     int unit = walletModel.getOptionsModel()->getDisplayUnit();
     CAmount balance = walletModel.wallet().getBalance();
-    QString balanceComparison = BitcoinUnits::floorHtmlWithUnit(unit, balance, false, BitcoinUnits::separatorAlways);
+    QString balanceComparison = ThoughtUnits::floorHtmlWithUnit(unit, balance, false, ThoughtUnits::separatorAlways);
     QCOMPARE(balanceText, balanceComparison);
 
     // Check Request Payment button
@@ -175,7 +179,7 @@ void TestGUI()
     labelInput->setText("TEST_LABEL_1");
 
     // Amount input
-    BitcoinAmountField* amountInput = receiveCoinsDialog.findChild<BitcoinAmountField*>("reqAmount");
+    ThoughtAmountField* amountInput = receiveCoinsDialog.findChild<ThoughtAmountField*>("reqAmount");
     amountInput->setValue(1);
 
     // Message input
@@ -193,7 +197,7 @@ void TestGUI()
             QCOMPARE(paymentTextList.at(0), QString("Payment information"));
             QVERIFY(paymentTextList.at(2).indexOf(QString("URI: dash:")) != -1);
             QVERIFY(paymentTextList.at(3).indexOf(QString("Address:")) != -1);
-            QCOMPARE(paymentTextList.at(4), QString("Amount: 0.00000001 ") + BitcoinUnits::name(unit));
+            QCOMPARE(paymentTextList.at(4), QString("Amount: 0.00000001 ") + ThoughtUnits::name(unit));
             QCOMPARE(paymentTextList.at(5), QString("Label: TEST_LABEL_1"));
             QCOMPARE(paymentTextList.at(6), QString("Message: TEST_MESSAGE_1"));
         }

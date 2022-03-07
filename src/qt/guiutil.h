@@ -40,7 +40,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the Dash Qt UI.
+/** Utility functions used by the Thought Qt UI.
  */
 namespace GUIUtil
 {
@@ -115,11 +115,11 @@ namespace GUIUtil
     // Setup appearance settings if not done yet
     void setupAppearance(QWidget* parent, OptionsModel* model);
 
-    // Parse "dash:" URI into recipient object, return true on successful parsing
-    bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
-    bool validateBitcoinURI(const QString& uri);
-    QString formatBitcoinURI(const SendCoinsRecipient &info);
+    // Parse "thought:" URI into recipient object, return true on successful parsing
+    bool parseThoughtURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseThoughtURI(QString uri, SendCoinsRecipient *out);
+    bool validateThoughtURI(const QString& uri);
+    QString formatThoughtURI(const SendCoinsRecipient &info);
 
     // Returns true if given address+amount meets "dust" definition
     bool isDust(interfaces::Node& node, const QString& address, const CAmount& amount);
@@ -188,7 +188,7 @@ namespace GUIUtil
     // Open debug.log
     void openDebugLogfile();
 
-    // Open dash.conf
+    // Open thought.conf
     void openConfigfile();
 
     // Browse backup folder
@@ -320,7 +320,7 @@ namespace GUIUtil
     /** get font size with GUIUtil::fontScale applied */
     double getScaledFontSize(int nSize);
 
-    /** Load dash specific appliciation fonts */
+    /** Load thought specific appliciation fonts */
     bool loadFonts();
     /** Check if the fonts have been loaded successfully */
     bool fontsLoaded();
@@ -364,8 +364,8 @@ namespace GUIUtil
     /** Return the name of the currently active theme.*/
     QString getActiveTheme();
 
-    /** Check if a dash specific theme is activated (light/dark).*/
-    bool dashThemeActive();
+    /** Check if a thought specific theme is activated (light/dark).*/
+    bool thoughtThemeActive();
 
     /** Load the theme and update all UI elements according to the appearance settings. */
     void loadTheme(bool fForce = false);

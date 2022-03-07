@@ -7,7 +7,7 @@
 #define THOUGHT_QT_THOUGHTGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/dash-config.h>
+#include <config/thought-config.h>
 #endif
 
 #include <amount.h>
@@ -53,18 +53,18 @@ class QToolButton;
 QT_END_NAMESPACE
 
 /**
-  Bitcoin GUI main class. This class represents the main window of the Bitcoin UI. It communicates with both the client and
+  Thought GUI main class. This class represents the main window of the Thought UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class BitcoinGUI : public QMainWindow
+class ThoughtGUI : public QMainWindow
 {
     Q_OBJECT
 
 public:
     static const std::string DEFAULT_UIPLATFORM;
 
-    explicit BitcoinGUI(interfaces::Node& node, const NetworkStyle* networkStyle, QWidget* parent = 0);
-    ~BitcoinGUI();
+    explicit ThoughtGUI(interfaces::Node& node, const NetworkStyle* networkStyle, QWidget* parent = 0);
+    ~ThoughtGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
