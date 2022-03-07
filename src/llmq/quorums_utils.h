@@ -1,9 +1,10 @@
 // Copyright (c) 2018-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_LLMQ_QUORUMS_UTILS_H
-#define BITCOIN_LLMQ_QUORUMS_UTILS_H
+#ifndef THOUGHT_LLMQ_QUORUMS_UTILS_H
+#define THOUGHT_LLMQ_QUORUMS_UTILS_H
 
 #include <consensus/params.h>
 
@@ -120,4 +121,4 @@ const Consensus::LLMQParams& GetLLMQParams(const Consensus::LLMQType llmqType);
 
 } // namespace llmq
 
-#endif // BITCOIN_LLMQ_QUORUMS_UTILS_H
+#endif // THOUGHT_LLMQ_QUORUMS_UTILS_H

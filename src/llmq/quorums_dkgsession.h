@@ -1,9 +1,10 @@
 // Copyright (c) 2018-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_LLMQ_QUORUMS_DKGSESSION_H
-#define BITCOIN_LLMQ_QUORUMS_DKGSESSION_H
+#ifndef THOUGHT_LLMQ_QUORUMS_DKGSESSION_H
+#define THOUGHT_LLMQ_QUORUMS_DKGSESSION_H
 
 #include <consensus/params.h>
 #include <net.h>
@@ -351,4 +352,4 @@ void SetSimulatedDKGErrorRate(const std::string& type, double rate);
 
 } // namespace llmq
 
-#endif // BITCOIN_LLMQ_QUORUMS_DKGSESSION_H
+#endif // THOUGHT_LLMQ_QUORUMS_DKGSESSION_H

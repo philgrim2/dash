@@ -1,9 +1,10 @@
 // Copyright (c) 2018-2020 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_LLMQ_QUORUMS_DEBUG_H
-#define BITCOIN_LLMQ_QUORUMS_DEBUG_H
+#ifndef THOUGHT_LLMQ_QUORUMS_DEBUG_H
+#define THOUGHT_LLMQ_QUORUMS_DEBUG_H
 
 #include <consensus/params.h>
 #include <sync.h>
@@ -108,4 +109,4 @@ extern CDKGDebugManager* quorumDKGDebugManager;
 
 } // namespace llmq
 
-#endif // BITCOIN_LLMQ_QUORUMS_DEBUG_H
+#endif // THOUGHT_LLMQ_QUORUMS_DEBUG_H

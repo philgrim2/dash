@@ -1,9 +1,10 @@
 // Copyright (c) 2019-2021 The Dash Core developers
+// Copyright (c) 2019-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_LLMQ_QUORUMS_CHAINLOCKS_H
-#define BITCOIN_LLMQ_QUORUMS_CHAINLOCKS_H
+#ifndef THOUGHT_LLMQ_QUORUMS_CHAINLOCKS_H
+#define THOUGHT_LLMQ_QUORUMS_CHAINLOCKS_H
 
 #include <llmq/quorums.h>
 #include <llmq/quorums_signing.h>
@@ -126,4 +127,4 @@ bool AreChainLocksEnabled();
 
 } // namespace llmq
 
-#endif // BITCOIN_LLMQ_QUORUMS_CHAINLOCKS_H
+#endif // THOUGHT_LLMQ_QUORUMS_CHAINLOCKS_H
