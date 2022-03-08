@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CONSENSUS_PARAMS_H
-#define BITCOIN_CONSENSUS_PARAMS_H
+#ifndef THOUGHT_CONSENSUS_PARAMS_H
+#define THOUGHT_CONSENSUS_PARAMS_H
 
 #include <uint256.h>
 #include <map>
@@ -205,4 +206,4 @@ struct Params {
 template<typename T> struct is_serializable_enum;
 template<> struct is_serializable_enum<Consensus::LLMQType> : std::true_type {};
 
-#endif // BITCOIN_CONSENSUS_PARAMS_H
+#endif // THOUGHT_CONSENSUS_PARAMS_H

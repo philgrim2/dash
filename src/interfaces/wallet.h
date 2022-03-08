@@ -1,9 +1,10 @@
 // Copyright (c) 2018 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_INTERFACES_WALLET_H
-#define BITCOIN_INTERFACES_WALLET_H
+#ifndef THOUGHT_INTERFACES_WALLET_H
+#define THOUGHT_INTERFACES_WALLET_H
 
 #include <amount.h>                    // For CAmount
 #include <fs.h>                        // For fs::path
@@ -41,7 +42,7 @@ using WalletOrderForm = std::vector<std::pair<std::string, std::string>>;
 using WalletValueMap = std::map<std::string, std::string>;
 
 namespace CoinJoin {
-//! Interface for the wallet constrained src/coinjoin part of a dash node (dashd process).
+//! Interface for the wallet constrained src/coinjoin part of a thought node (thoughtd process).
 class Client
 {
 public:
@@ -387,4 +388,4 @@ std::unique_ptr<Wallet> MakeWallet(const std::shared_ptr<CWallet>& wallet);
 
 } // namespace interfaces
 
-#endif // BITCOIN_INTERFACES_WALLET_H
+#endif // THOUGHT_INTERFACES_WALLET_H

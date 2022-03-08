@@ -1,23 +1,24 @@
 // Copyright (c) 2018-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DASH_CRYPTO_BLS_H
-#define DASH_CRYPTO_BLS_H
+#ifndef THOUGHT_CRYPTO_BLS_H
+#define THOUGHT_CRYPTO_BLS_H
 
 #include <hash.h>
 #include <serialize.h>
 #include <uint256.h>
 #include <utilstrencodings.h>
 
-// bls-dash uses relic, which may define DEBUG and ERROR, which leads to many warnings in some build setups
+// bls-thought uses relic, which may define DEBUG and ERROR, which leads to many warnings in some build setups
 #undef ERROR
 #undef DEBUG
-#include <bls-dash/bls.hpp>
-#include <bls-dash/privatekey.hpp>
-#include <bls-dash/elements.hpp>
-#include <bls-dash/schemes.hpp>
-#include <bls-dash/threshold.hpp>
+#include <bls-thought/bls.hpp>
+#include <bls-thought/privatekey.hpp>
+#include <bls-thought/elements.hpp>
+#include <bls-thought/schemes.hpp>
+#include <bls-thought/threshold.hpp>
 #undef DOUBLE
 
 #include <array>
@@ -235,7 +236,7 @@ public:
     void AggregateInsecure(const CBLSSecretKey& o);
     static CBLSSecretKey AggregateInsecure(const std::vector<CBLSSecretKey>& sks);
 
-#ifndef BUILD_BITCOIN_INTERNAL
+#ifndef BUILD_THOUGHT_INTERNAL
     void MakeNewKey();
 #endif
     bool SecretKeyShare(const std::vector<CBLSSecretKey>& msk, const CBLSId& id);
@@ -292,7 +293,7 @@ public:
     bool Recover(const std::vector<CBLSSignature>& sigs, const std::vector<CBLSId>& ids);
 };
 
-#ifndef BUILD_BITCOIN_INTERNAL
+#ifndef BUILD_THOUGHT_INTERNAL
 template<typename BLSObject>
 class CBLSLazyWrapper
 {
@@ -448,4 +449,4 @@ typedef std::shared_ptr<BLSSignatureVector> BLSSignatureVectorPtr;
 
 bool BLSInit();
 
-#endif // DASH_CRYPTO_BLS_H
+#endif // THOUGHT_CRYPTO_BLS_H

@@ -312,4 +312,4 @@ void AddCoins(CCoinsViewCache& cache, const CTransaction& tx, int nHeight, bool 
 // lookups to database, so it should be used with care.
 const Coin& AccessByTxid(const CCoinsViewCache& cache, const uint256& txid);
 
-#endif // BITCOIN_COINS_H
+#endif // THOUGHT_COINS_H

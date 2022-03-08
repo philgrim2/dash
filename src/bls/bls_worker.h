@@ -1,9 +1,10 @@
 // Copyright (c) 2018-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DASH_CRYPTO_BLS_WORKER_H
-#define DASH_CRYPTO_BLS_WORKER_H
+#ifndef THOUGHT_CRYPTO_BLS_WORKER_H
+#define THOUGHT_CRYPTO_BLS_WORKER_H
 
 #include <bls/bls.h>
 
@@ -202,4 +203,4 @@ private:
     }
 };
 
-#endif //DASH_CRYPTO_BLS_WORKER_H
+#endif //THOUGHT_CRYPTO_BLS_WORKER_H

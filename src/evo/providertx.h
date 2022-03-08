@@ -1,9 +1,10 @@
 // Copyright (c) 2018-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_EVO_PROVIDERTX_H
-#define BITCOIN_EVO_PROVIDERTX_H
+#ifndef THOUGHT_EVO_PROVIDERTX_H
+#define THOUGHT_EVO_PROVIDERTX_H
 
 #include <bls/bls.h>
 #include <consensus/validation.h>
@@ -241,4 +242,4 @@ bool CheckProUpServTx(const CTransaction& tx, const CBlockIndex* pindexPrev, CVa
 bool CheckProUpRegTx(const CTransaction& tx, const CBlockIndex* pindexPrev, CValidationState& state, const CCoinsViewCache& view);
 bool CheckProUpRevTx(const CTransaction& tx, const CBlockIndex* pindexPrev, CValidationState& state);
 
-#endif // BITCOIN_EVO_PROVIDERTX_H
+#endif // THOUGHT_EVO_PROVIDERTX_H

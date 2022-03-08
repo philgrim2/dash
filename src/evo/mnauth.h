@@ -1,9 +1,10 @@
 // Copyright (c) 2019-2020 The Dash Core developers
+// Copyright (c) 2019-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_EVO_MNAUTH_H
-#define BITCOIN_EVO_MNAUTH_H
+#ifndef THOUGHT_EVO_MNAUTH_H
+#define THOUGHT_EVO_MNAUTH_H
 
 #include <bls/bls.h>
 #include <serialize.h>
@@ -55,4 +56,4 @@ public:
 };
 
 
-#endif // BITCOIN_EVO_MNAUTH_H
+#endif // THOUGHT_EVO_MNAUTH_H

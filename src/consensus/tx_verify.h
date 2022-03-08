@@ -1,9 +1,10 @@
 // Copyright (c) 2017-2017 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CONSENSUS_TX_VERIFY_H
-#define BITCOIN_CONSENSUS_TX_VERIFY_H
+#ifndef THOUGHT_CONSENSUS_TX_VERIFY_H
+#define THOUGHT_CONSENSUS_TX_VERIFY_H
 
 #include <amount.h>
 
@@ -78,4 +79,4 @@ bool EvaluateSequenceLocks(const CBlockIndex& block, std::pair<int, int64_t> loc
  */
 bool SequenceLocks(const CTransaction &tx, int flags, std::vector<int>* prevHeights, const CBlockIndex& block);
 
-#endif // BITCOIN_CONSENSUS_TX_VERIFY_H
+#endif // THOUGHT_CONSENSUS_TX_VERIFY_H

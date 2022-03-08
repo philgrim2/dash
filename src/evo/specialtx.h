@@ -1,9 +1,10 @@
 // Copyright (c) 2018-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_EVO_SPECIALTX_H
-#define BITCOIN_EVO_SPECIALTX_H
+#ifndef THOUGHT_EVO_SPECIALTX_H
+#define THOUGHT_EVO_SPECIALTX_H
 
 #include <primitives/transaction.h>
 #include <streams.h>
@@ -50,4 +51,4 @@ void SetTxPayload(CMutableTransaction& tx, const T& payload)
 
 uint256 CalcTxInputsHash(const CTransaction& tx);
 
-#endif // BITCOIN_EVO_SPECIALTX_H
+#endif // THOUGHT_EVO_SPECIALTX_H

@@ -1,9 +1,10 @@
 // Copyright (c) 2018 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_INTERFACES_NODE_H
-#define BITCOIN_INTERFACES_NODE_H
+#ifndef THOUGHT_INTERFACES_NODE_H
+#define THOUGHT_INTERFACES_NODE_H
 
 #include <addrdb.h>     // For banmap_t
 #include <amount.h>     // For CAmount
@@ -34,7 +35,7 @@ namespace interfaces {
 class Handler;
 class Wallet;
 
-//! Interface for the src/evo part of a dash node (dashd process).
+//! Interface for the src/evo part of a Thought node (thoughtd process).
 class EVO
 {
 public:
@@ -42,7 +43,7 @@ public:
     virtual CDeterministicMNList getListAtChainTip() = 0;
 };
 
-//! Interface for the src/llmq part of a dash node (dashd process).
+//! Interface for the src/llmq part of a thought node (thoughtd process).
 class LLMQ
 {
 public:
@@ -50,7 +51,7 @@ public:
     virtual size_t getInstantSentLockCount() = 0;
 };
 
-//! Interface for the src/masternode part of a dash node (dashd process).
+//! Interface for the src/masternode part of a thought node (thoughtd process).
 namespace Masternode
 {
 class Sync
@@ -88,7 +89,7 @@ public:
 };
 }
 
-//! Top-level interface for a dash node (dashd process).
+//! Top-level interface for a thought node (thoughtd process).
 class Node
 {
 public:
@@ -328,4 +329,4 @@ std::unique_ptr<Node> MakeNode();
 
 } // namespace interfaces
 
-#endif // BITCOIN_INTERFACES_NODE_H
+#endif // THOUGHT_INTERFACES_NODE_H

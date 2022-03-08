@@ -1,9 +1,10 @@
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_GOVERNANCE_GOVERNANCE_H
-#define BITCOIN_GOVERNANCE_GOVERNANCE_H
+#ifndef THOUGHT_GOVERNANCE_GOVERNANCE_H
+#define THOUGHT_GOVERNANCE_GOVERNANCE_H
 
 #include <bloom.h>
 #include <cachemap.h>
@@ -390,4 +391,4 @@ private:
 
 bool AreSuperblocksEnabled();
 
-#endif // BITCOIN_GOVERNANCE_GOVERNANCE_H
+#endif // THOUGHT_GOVERNANCE_GOVERNANCE_H
