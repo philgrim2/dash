@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # Copyright (c) 2021 The Dash Core developers
+# Copyright (c) 2021-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 from test_framework.mininode import *
-from test_framework.test_framework import DashTestFramework
+from test_framework.test_framework import ThoughtTestFramework
 from test_framework.util import assert_equal, assert_raises_rpc_error
 
 '''
@@ -16,7 +17,7 @@ Tests mnauth RPC command
 
 class FakeMNAUTHTest(DashTestFramework):
     def set_test_params(self):
-        self.set_dash_test_params(2, 1, fast_dip3_enforcement=True)
+        self.set_thought_test_params(2, 1, fast_dip3_enforcement=True)
 
     def run_test(self):
 

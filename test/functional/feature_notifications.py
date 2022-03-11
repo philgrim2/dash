@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2016 The Bitcoin Core developers
+# Copyright (c) 2018-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the -alertnotify, -blocknotify and -walletnotify options."""
@@ -66,7 +67,7 @@ class NotificationsTest(BitcoinTestFramework):
         self.nodes[1].generate(41)
         self.sync_all()
 
-        # Give dashd 10 seconds to write the alert notification
+        # Give thoughtd 10 seconds to write the alert notification
         wait_until(lambda: os.path.isfile(self.alert_filename) and os.path.getsize(self.alert_filename), timeout=10)
 
         with open(self.alert_filename, 'r', encoding='utf8') as f:

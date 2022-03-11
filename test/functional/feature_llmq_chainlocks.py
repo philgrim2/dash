@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2015-2021 The Dash Core developers
+# Copyright (c) 2018-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,7 +19,7 @@ Checks LLMQs based ChainLocks
 
 class LLMQChainLocksTest(DashTestFramework):
     def set_test_params(self):
-        self.set_dash_test_params(4, 3, fast_dip3_enforcement=True)
+        self.set_thought_test_params(4, 3, fast_dip3_enforcement=True)
 
     def run_test(self):
 

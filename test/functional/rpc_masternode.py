@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # Copyright (c) 2020-2021 The Dash Core developers
+# Copyright (c) 2020-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-from test_framework.test_framework import DashTestFramework
+from test_framework.test_framework import ThoughtTestFramework
 from test_framework.util import assert_equal
 
 '''
@@ -13,7 +14,7 @@ Test "masternode" rpc subcommands
 
 class RPCMasternodeTest(DashTestFramework):
     def set_test_params(self):
-        self.set_dash_test_params(4, 3, fast_dip3_enforcement=True)
+        self.set_thought_test_params(4, 3, fast_dip3_enforcement=True)
 
     def run_test(self):
         self.log.info("test that results from `winners` and `payments` RPCs match")

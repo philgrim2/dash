@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2017 The Bitcoin Core developers
+# Copyright (c) 2018-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test message sending before handshake completion.
@@ -55,7 +56,7 @@ class CLazyNode(P2PInterface):
 # anyway, and eventually get disconnected.
 class CNodeNoVersionBan(CLazyNode):
     # send a bunch of veracks without sending a message. This should get us disconnected.
-    # NOTE: implementation-specific check here. Remove if dashd ban behavior changes
+    # NOTE: implementation-specific check here. Remove if thoughtd ban behavior changes
     def on_open(self):
         super().on_open()
         for i in range(banscore):

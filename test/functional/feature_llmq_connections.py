@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2015-2021 The Dash Core developers
+# Copyright (c) 2018-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,8 +16,8 @@ Checks intra quorum connections
 
 class LLMQConnections(DashTestFramework):
     def set_test_params(self):
-        self.set_dash_test_params(15, 14, fast_dip3_enforcement=True)
-        self.set_dash_llmq_test_params(5, 3)
+        self.set_thought_test_params(15, 14, fast_dip3_enforcement=True)
+        self.set_thought_llmq_test_params(5, 3)
 
     def run_test(self):
         self.nodes[0].spork("SPORK_17_QUORUM_DKG_ENABLED", 0)

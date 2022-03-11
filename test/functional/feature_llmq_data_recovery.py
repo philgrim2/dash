@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2021 The Dash Core developers
+# Copyright (c) 2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -25,8 +26,8 @@ llmq_type_strings = {llmq_test: 'llmq_test', llmq_test_v17: 'llmq_test_v17'}
 class QuorumDataRecoveryTest(DashTestFramework):
     def set_test_params(self):
         extra_args = [["-vbparams=dip0020:0:999999999999:10:8:6:5"] for _ in range(9)]
-        self.set_dash_test_params(9, 7, fast_dip3_enforcement=True, extra_args=extra_args)
-        self.set_dash_llmq_test_params(4, 3)
+        self.set_thought_test_params(9, 7, fast_dip3_enforcement=True, extra_args=extra_args)
+        self.set_thought_llmq_test_params(4, 3)
 
     def restart_mn(self, mn, reindex=False, qvvec_sync=[], qdata_recovery_enabled=True):
         args = self.extra_args[mn.nodeIdx] + ['-masternodeblsprivkey=%s' % mn.keyOperator,

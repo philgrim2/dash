@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # Copyright (c) 2018-2021 The Dash Core developers
+# Copyright (c) 2018-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test the dash specific ZMQ notification interfaces."""
+"""Test the thought specific ZMQ notification interfaces."""
 
 import configparser
 from enum import Enum
@@ -94,10 +95,10 @@ class DashZMQTest (DashTestFramework):
         node0_extra_args.append("-whitelist=127.0.0.1")
         node0_extra_args.append("-watchquorums")  # have to watch quorums to receive recsigs and trigger zmq
 
-        self.set_dash_test_params(4, 3, fast_dip3_enforcement=True, extra_args=[node0_extra_args, [], [], []])
+        self.set_thought_test_params(4, 3, fast_dip3_enforcement=True, extra_args=[node0_extra_args, [], [], []])
 
     def run_test(self):
-        # Check that dashd has been built with ZMQ enabled.
+        # Check that thoughtd has been built with ZMQ enabled.
         config = configparser.ConfigParser()
         config.read_file(open(self.options.configfile))
 
@@ -121,7 +122,7 @@ class DashZMQTest (DashTestFramework):
             # Wait a moment to avoid subscribing to recovered sig in the test before the one from the chainlock
             # has been sent which leads to test failure.
             time.sleep(1)
-            # Test all dash related ZMQ publisher
+            # Test all thought related ZMQ publisher
             self.test_recovered_signature_publishers()
             self.test_chainlock_publishers()
             self.test_instantsend_publishers()
@@ -330,7 +331,7 @@ class DashZMQTest (DashTestFramework):
             "end_epoch": proposal_time + 60,
             "payment_amount": 5,
             "payment_address": self.nodes[0].getnewaddress(),
-            "url": "https://dash.org"
+            "url": "https://thought.live"
         }
         proposal_hex = ''.join(format(x, '02x') for x in json.dumps(proposal_data).encode())
         collateral = self.nodes[0].gobject("prepare", "0", proposal_rev, proposal_time, proposal_hex)

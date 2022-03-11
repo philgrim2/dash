@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2016 The Bitcoin Core developers
+# Copyright (c) 2018-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test version bits warning system.
@@ -94,7 +95,7 @@ class VersionBitsWarningTest(BitcoinTestFramework):
         # is cleared. This will move the versionbit state to ACTIVE.
         node.generate(VB_PERIOD)
 
-        # Stop-start the node. This is required because dashd will only warn once about unknown versions or unknown rules activating.
+        # Stop-start the node. This is required because thoughtd will only warn once about unknown versions or unknown rules activating.
         self.restart_node(0)
 
         # Generating one block guarantees that we'll get out of IBD

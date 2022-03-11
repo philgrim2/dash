@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2021 The Dash Core developers
+# Copyright (c) 2021-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -126,7 +127,7 @@ class QuorumDataInterface(P2PInterface):
 class QuorumDataMessagesTest(DashTestFramework):
     def set_test_params(self):
         extra_args = [["-llmq-data-recovery=0"]] * 4
-        self.set_dash_test_params(4, 3, fast_dip3_enforcement=True, extra_args=extra_args)
+        self.set_thought_test_params(4, 3, fast_dip3_enforcement=True, extra_args=extra_args)
 
     def restart_mn(self, mn, reindex=False):
         args = self.extra_args[mn.nodeIdx] + ['-masternodeblsprivkey=%s' % mn.keyOperator]

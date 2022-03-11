@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 # Copyright (c) 2015-2016 The Bitcoin Core developers
+# Copyright (c) 2018-2022 Thought Network Ltd
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test dashd with different proxy configuration.
+"""Test thoughtd with different proxy configuration.
 
 Test plan:
-- Start dashd's with different proxy configurations
+- Start thoughtd's with different proxy configurations
 - Use addnode to initiate connections
 - Verify that proxies are connected to, and the right connection command is given
-- Proxy configurations to test on dashd side:
+- Proxy configurations to test on thoughtd side:
     - `-proxy` (proxy everything)
     - `-onion` (proxy just onions)
     - `-proxyrandomize` Circuit randomization
@@ -18,8 +19,8 @@ Test plan:
     - proxy on IPv6
 
 - Create various proxies (as threads)
-- Create dashds that connect to them
-- Manipulate the dashds using addnode (onetry) an observe effects
+- Create thoughtds that connect to them
+- Manipulate the thoughtds using addnode (onetry) an observe effects
 
 addnode connect to IPv4
 addnode connect to IPv6
@@ -95,7 +96,7 @@ class ProxyTest(BitcoinTestFramework):
         node.addnode("15.61.23.23:1234", "onetry")
         cmd = proxies[0].queue.get()
         assert(isinstance(cmd, Socks5Command))
-        # Note: dashd's SOCKS5 implementation only sends atyp DOMAINNAME, even if connecting directly to IPv4/IPv6
+        # Note: thoughtd's SOCKS5 implementation only sends atyp DOMAINNAME, even if connecting directly to IPv4/IPv6
         assert_equal(cmd.atyp, AddressType.DOMAINNAME)
         assert_equal(cmd.addr, b"15.61.23.23")
         assert_equal(cmd.port, 1234)
@@ -109,7 +110,7 @@ class ProxyTest(BitcoinTestFramework):
             node.addnode("[1233:3432:2434:2343:3234:2345:6546:4534]:5443", "onetry")
             cmd = proxies[1].queue.get()
             assert(isinstance(cmd, Socks5Command))
-            # Note: dashd's SOCKS5 implementation only sends atyp DOMAINNAME, even if connecting directly to IPv4/IPv6
+            # Note: thoughtd's SOCKS5 implementation only sends atyp DOMAINNAME, even if connecting directly to IPv4/IPv6
             assert_equal(cmd.atyp, AddressType.DOMAINNAME)
             assert_equal(cmd.addr, b"1233:3432:2434:2343:3234:2345:6546:4534")
             assert_equal(cmd.port, 5443)

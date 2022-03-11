@@ -25,7 +25,7 @@ don't have test cases for.
 - Avoid wildcard imports where possible
 - Use a module-level docstring to describe what the test is testing, and how it
   is testing it.
-- When subclassing the BitcoinTestFramwork, place overrides for the
+- When subclassing the ThoughtTestFramwork, place overrides for the
   `set_test_params()`, `add_options()` and `setup_xxxx()` methods at the top of
   the subclass, then locally-defined helper methods, then the `run_test()` method.
 - Use `'{}'.format(x)` for string formatting, not `'%s' % x`.
@@ -77,12 +77,12 @@ over the network (`CBlock`, `CTransaction`, etc, along with the network-level
 wrappers for them, `msg_block`, `msg_tx`, etc).
 
 - P2P tests have two threads. One thread handles all network communication
-with the dashd(s) being tested (using python's asyncore package); the other
+with the thoughtd(s) being tested (using python's asyncore package); the other
 implements the test logic.
 
-- `P2PConnection` is the class used to connect to a dashd.  `P2PInterface`
+- `P2PConnection` is the class used to connect to a thoughtd.  `P2PInterface`
 contains the higher level logic for processing P2P payloads and connecting to
-the Bitcoin Core node application logic. For custom behaviour, subclass the
+the Thought Core node application logic. For custom behaviour, subclass the
 P2PInterface object and override the callback methods.
 
 - Call `network_thread_start()` after all `P2PInterface` objects are created to
@@ -104,7 +104,7 @@ Base class for functional tests.
 Generally useful functions.
 
 #### [test_framework/mininode.py](test_framework/mininode.py)
-Basic code to support P2P connectivity to a dashd.
+Basic code to support P2P connectivity to a thoughtd.
 
 #### [test_framework/script.py](test_framework/script.py)
 Utilities for manipulating transaction scripts (originally from python-bitcoinlib)
