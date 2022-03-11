@@ -149,7 +149,7 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
     }
 }
 
-/** Class encapsulating Dash Core startup and shutdown.
+/** Class encapsulating Thought Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
 class ThoughtCore: public QObject
@@ -175,7 +175,7 @@ private:
     interfaces::Node& m_node;
 };
 
-/** Main Dash application object */
+/** Main Thought application object */
 class ThoughtApplication: public QApplication
 {
     Q_OBJECT
@@ -538,7 +538,7 @@ void ThoughtApplication::shutdownResult()
 
 void ThoughtApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", ThoughtGUI::tr("A fatal error occurred. Dash Core can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", ThoughtGUI::tr("A fatal error occurred. Thought Core can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
@@ -568,7 +568,7 @@ static void SetupUIArgs()
     gArgs.AddArg("-splash", strprintf(QObject::tr("Show splash screen on startup (default: %u)").toStdString(), DEFAULT_SPLASHSCREEN), false, OptionsCategory::GUI);
     gArgs.AddArg("-uiplatform", strprintf("Select platform to customize UI for (one of windows, macosx, other; default: %s)", ThoughtGUI::DEFAULT_UIPLATFORM), true, OptionsCategory::GUI);
     gArgs.AddArg("-debug-ui", "Updates the UI's stylesheets in realtime with changes made to the css files in -custom-css-dir and forces some widgets to show up which are usually only visible under certain circumstances. (default: 0)", true, OptionsCategory::GUI);
-    gArgs.AddArg("-windowtitle=<name>", _("Sets a window title which is appended to \"Dash Core - \""), false, OptionsCategory::GUI);
+    gArgs.AddArg("-windowtitle=<name>", _("Sets a window title which is appended to \"Thought Core - \""), false, OptionsCategory::GUI);
 }
 
 #ifndef THOUGHT_QT_TEST

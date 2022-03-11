@@ -282,8 +282,8 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent, bool fAllow
     // and this is the only place, where this address is supplied.
     widget->setPlaceholderText(QObject::tr("Enter a Thought address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
-    widget->setValidator(new BitcoinAddressEntryValidator(parent, fAllowURI));
-    widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
+    widget->setValidator(new ThoughtAddressEntryValidator(parent, fAllowURI));
+    widget->setCheckValidator(new ThoughtAddressCheckValidator(parent));
 }
 
 void setupAppearance(QWidget* parent, OptionsModel* model)
@@ -328,7 +328,7 @@ void setupAppearance(QWidget* parent, OptionsModel* model)
     }
 }
 
-bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseThoughtURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no thought: URI
     if(!uri.isValid() || uri.scheme() != QString("thought"))
@@ -373,7 +373,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!BitcoinUnits::parse(BitcoinUnits::DASH, i->second, &rv.amount))
+                if(!ThoughtUnits::parse(ThoughtUnits::THT, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -391,26 +391,26 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
+bool parseThoughtURI(QString uri, SendCoinsRecipient *out)
 {
     QUrl uriInstance(uri);
-    return parseBitcoinURI(uriInstance, out);
+    return parseThoughtURI(uriInstance, out);
 }
 
-bool validateBitcoinURI(const QString& uri)
+bool validateThoughtURI(const QString& uri)
 {
     SendCoinsRecipient rcp;
-    return parseBitcoinURI(uri, &rcp);
+    return parseThoughtURI(uri, &rcp);
 }
 
-QString formatBitcoinURI(const SendCoinsRecipient &info)
+QString formatThoughtURI(const SendCoinsRecipient &info)
 {
     QString ret = QString("thought:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::DASH, info.amount, false, BitcoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(ThoughtUnits::format(ThoughtUnits::THT, info.amount, false, ThoughtUnits::separatorNever));
         paramCount++;
     }
 
@@ -1084,7 +1084,7 @@ void loadStyleSheet(bool fForceUpdate)
                 return false;
             }
 
-            std::string platformName = gArgs.GetArg("-uiplatform", BitcoinGUI::DEFAULT_UIPLATFORM);
+            std::string platformName = gArgs.GetArg("-uiplatform", ThoughtGUI::DEFAULT_UIPLATFORM);
             stylesheet = std::make_unique<QString>();
 
             for (const auto& file : vecFiles) {
@@ -1522,7 +1522,7 @@ void updateFonts()
         std::vector<QString> vecIgnoreClasses{
             "QWidget", "QDialog", "QFrame", "QStackedWidget", "QDesktopWidget", "QDesktopScreenWidget",
             "QTipLabel", "QMessageBox", "QMenu", "QComboBoxPrivateScroller", "QComboBoxPrivateContainer",
-            "QScrollBar", "QListView", "BitcoinGUI", "WalletView", "WalletFrame"
+            "QScrollBar", "QListView", "ThoughtGUI", "WalletView", "WalletFrame"
         };
         std::vector<QString> vecIgnoreObjects{
             "messagesWidget"

@@ -120,7 +120,7 @@ public:
         int h = 0;
         int w = fm.width(ThoughtUnits::format(ThoughtUnits::THT, ThoughtUnits::maxMoney(), false, ThoughtUnits::separatorAlways));
         w += 2; // cursor blinking space
-        w += GUIUtil::dashThemeActive() ? 24 : 0; // counteract padding from css
+        w += GUIUtil::thoughtThemeActive() ? 24 : 0; // counteract padding from css
         return QSize(w, h);
     }
 
@@ -155,7 +155,7 @@ Q_SIGNALS:
     void valueChanged();
 };
 
-#include <qt/bitcoinamountfield.moc>
+#include <qt/thoughtamountfield.moc>
 
 ThoughtAmountField::ThoughtAmountField(QWidget *parent) :
     QWidget(parent),

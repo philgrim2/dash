@@ -24,7 +24,7 @@ private:
     bool fAllowURI;
 };
 
-/** Thought address widget validator, checks for a valid bitcoin address.
+/** Thought address widget validator, checks for a valid Thought address.
  */
 class ThoughtAddressCheckValidator : public QValidator
 {

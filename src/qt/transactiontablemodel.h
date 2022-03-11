@@ -6,7 +6,7 @@
 #ifndef THOUGHT_QT_TRANSACTIONTABLEMODEL_H
 #define THOUGHT_QT_TRANSACTIONTABLEMODEL_H
 
-#include <qt/bitcoinunits.h>
+#include <qt/thoughtunits.h>
 
 #include <QAbstractTableModel>
 #include <QStringList>

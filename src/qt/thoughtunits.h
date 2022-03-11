@@ -43,7 +43,7 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** Dash unit definitions. Encapsulates parsing and formatting
+/** Thought unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
 class ThoughtUnits: public QAbstractListModel
@@ -53,7 +53,7 @@ class ThoughtUnits: public QAbstractListModel
 public:
     explicit ThoughtUnits(QObject *parent);
 
-    /** Dash units.
+    /** Thought units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit

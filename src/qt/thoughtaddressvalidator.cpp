@@ -95,7 +95,7 @@ ThoughtAddressCheckValidator::ThoughtAddressCheckValidator(QObject *parent) :
 QValidator::State ThoughtAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
-    // Validate the passed Dash address
+    // Validate the passed Thought address
     if (IsValidDestinationString(input.toStdString())) {
         return QValidator::Acceptable;
     }

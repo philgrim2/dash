@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/thought_ar.qm</file>
+        <file alias="bg">locale/thought_bg.qm</file>
+        <file alias="de">locale/thought_de.qm</file>
+        <file alias="en">locale/thought_en.qm</file>
+        <file alias="es">locale/thought_es.qm</file>
+        <file alias="fi">locale/thought_fi.qm</file>
+        <file alias="fr">locale/thought_fr.qm</file>
+        <file alias="it">locale/thought_it.qm</file>
+        <file alias="ja">locale/thought_ja.qm</file>
+        <file alias="ko">locale/thought_ko.qm</file>
+        <file alias="nl">locale/thought_nl.qm</file>
+        <file alias="pl">locale/thought_pl.qm</file>
+        <file alias="pt">locale/thought_pt.qm</file>
+        <file alias="ro">locale/thought_ro.qm</file>
+        <file alias="ru">locale/thought_ru.qm</file>
+        <file alias="sk">locale/thought_sk.qm</file>
+        <file alias="th">locale/thought_th.qm</file>
+        <file alias="tr">locale/thought_tr.qm</file>
+        <file alias="vi">locale/thought_vi.qm</file>
+        <file alias="zh_CN">locale/thought_zh_CN.qm</file>
+        <file alias="zh_TW">locale/thought_zh_TW.qm</file>
+    </qresource>
+</RCC>

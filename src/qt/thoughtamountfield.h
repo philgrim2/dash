@@ -18,7 +18,7 @@ QT_BEGIN_NAMESPACE
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering bitcoin amounts.
+/** Widget for entering THT amounts.
   */
 class ThoughtAmountField: public QWidget
 {
