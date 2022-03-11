@@ -72,12 +72,12 @@ CLEANFILES += $(CLEAN_THOUGHT_BENCH)
 
 bench/checkblock.cpp: bench/data/block813851.raw.h
 
-bitcoin_bench: $(BENCH_BINARY)
+thought_bench: $(BENCH_BINARY)
 
 bench: $(BENCH_BINARY) FORCE
 	$(BENCH_BINARY)
 
-bitcoin_bench_clean : FORCE
+thought_bench_clean : FORCE
 	rm -f $(CLEAN_THOUGHT_BENCH) $(bench_bench_thought_OBJECTS) $(BENCH_BINARY)
 
 bench/data/%.raw.h: bench/data/%.raw

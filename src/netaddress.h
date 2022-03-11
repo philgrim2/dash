@@ -7,7 +7,7 @@
 #define THOUGHT_NETADDRESS_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/dash-config.h>
+#include <config/thought-config.h>
 #endif
 
 #include <compat.h>

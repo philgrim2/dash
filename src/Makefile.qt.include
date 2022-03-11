@@ -59,10 +59,10 @@ QT_MOC_CPP = \
   qt/moc_appearancewidget.cpp \
   qt/moc_askpassphrasedialog.cpp \
   qt/moc_bantablemodel.cpp \
-  qt/moc_bitcoinaddressvalidator.cpp \
-  qt/moc_bitcoinamountfield.cpp \
-  qt/moc_bitcoingui.cpp \
-  qt/moc_bitcoinunits.cpp \
+  qt/moc_thoughtaddressvalidator.cpp \
+  qt/moc_thoughtamountfield.cpp \
+  qt/moc_thoughtgui.cpp \
+  qt/moc_thoughtunits.cpp \
   qt/moc_callback.cpp \
   qt/moc_clientmodel.cpp \
   qt/moc_coincontroldialog.cpp \
@@ -111,7 +111,7 @@ THOUGHT_MM = \
 
 QT_MOC = \
   qt/thought.moc \
-  qt/bitcoinamountfield.moc \
+  qt/thoughtamountfield.moc \
   qt/callback.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
@@ -132,10 +132,10 @@ THOUGHT_QT_H = \
   qt/appearancewidget.h \
   qt/askpassphrasedialog.h \
   qt/bantablemodel.h \
-  qt/bitcoinaddressvalidator.h \
-  qt/bitcoinamountfield.h \
-  qt/bitcoingui.h \
-  qt/bitcoinunits.h \
+  qt/thoughtaddressvalidator.h \
+  qt/thoughtamountfield.h \
+  qt/thoughtgui.h \
+  qt/thoughtunits.h \
   qt/callback.h \
   qt/clientmodel.h \
   qt/coincontroldialog.h \
@@ -219,10 +219,10 @@ RES_ICONS = \
 THOUGHT_QT_BASE_CPP = \
   qt/appearancewidget.cpp \
   qt/bantablemodel.cpp \
-  qt/bitcoinaddressvalidator.cpp \
-  qt/bitcoinamountfield.cpp \
-  qt/bitcoingui.cpp \
-  qt/bitcoinunits.cpp \
+  qt/thoughtaddressvalidator.cpp \
+  qt/thoughtamountfield.cpp \
+  qt/thoughtgui.cpp \
+  qt/thoughtunits.cpp \
   qt/clientmodel.cpp \
   qt/csvmodelwriter.cpp \
   qt/guiutil.cpp \
