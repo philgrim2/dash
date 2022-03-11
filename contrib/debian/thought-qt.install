@@ -1,0 +1,6 @@
+usr/local/bin/thought-qt usr/bin
+share/pixmaps/thought32.xpm usr/share/pixmaps
+share/pixmaps/thought16.xpm usr/share/pixmaps
+share/pixmaps/thought128.png usr/share/pixmaps
+debian/thought-qt.desktop usr/share/applications
+debian/thought-qt.protocol usr/share/kde4/services/
