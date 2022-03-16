@@ -11,14 +11,14 @@
 #include <uint256.h>
 #include <utilstrencodings.h>
 
-// bls-thought uses relic, which may define DEBUG and ERROR, which leads to many warnings in some build setups
+// bls-dash uses relic, which may define DEBUG and ERROR, which leads to many warnings in some build setups
 #undef ERROR
 #undef DEBUG
-#include <bls-thought/bls.hpp>
-#include <bls-thought/privatekey.hpp>
-#include <bls-thought/elements.hpp>
-#include <bls-thought/schemes.hpp>
-#include <bls-thought/threshold.hpp>
+#include <bls-dash/bls.hpp>
+#include <bls-dash/privatekey.hpp>
+#include <bls-dash/elements.hpp>
+#include <bls-dash/schemes.hpp>
+#include <bls-dash/threshold.hpp>
 #undef DOUBLE
 
 #include <array>

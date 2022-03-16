@@ -46,7 +46,7 @@ THOUGHT_INCLUDES=-I$(builddir) $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFL
 THOUGHT_INCLUDES += -I$(srcdir)/secp256k1/include
 THOUGHT_INCLUDES += $(UNIVALUE_CFLAGS)
 
-BLS_LIBS=-lbls-thought -lgmp
+BLS_LIBS=-lbls-dash -lgmp
 
 LIBTHOUGHT_SERVER=libthought_server.a
 LIBTHOUGHT_COMMON=libthought_common.a
