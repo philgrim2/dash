@@ -1,4 +1,5 @@
 // Copyright (c) 2016 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +13,7 @@
 #include <rpc/register.h>
 #include <rpc/server.h>
 #include <qt/rpcconsole.h>
-#include <test/test_dash.h>
+#include <test/test_thought.h>
 #include <univalue.h>
 #include <util.h>
 
