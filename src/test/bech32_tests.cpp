@@ -1,9 +1,10 @@
 // Copyright (c) 2017 Pieter Wuille
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bech32.h>
-#include <test/test_dash.h>
+#include <test/test_thought.h>
 
 #include <boost/test/unit_test.hpp>
 

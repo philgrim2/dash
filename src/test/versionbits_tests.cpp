@@ -1,10 +1,11 @@
 // Copyright (c) 2014-2016 The Bitcoin Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <chain.h>
 #include <versionbits.h>
-#include <test/test_dash.h>
+#include <test/test_thought.h>
 #include <chainparams.h>
 #include <validation.h>
 #include <consensus/params.h>

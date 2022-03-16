@@ -1,9 +1,12 @@
+// Copyright (c) 2018-2022 Thought Network Ltd
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include <boost/test/unit_test.hpp>
 
 #include <stdlib.h>
 
 #include <rpc/blockchain.h>
-#include <test/test_dash.h>
+#include <test/test_thought.h>
 
 /* Equality between doubles is imprecise. Comparison should be done
  * with a small threshold of tolerance, rather than exact equality.
