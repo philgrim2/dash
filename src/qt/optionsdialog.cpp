@@ -138,7 +138,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     }
     ui->thirdPartyTxUrls->setPlaceholderText("https://example.com/tx/%s");
 
-    ui->unit->setModel(new BitcoinUnits(this));
+    ui->unit->setModel(new ThoughtUnits(this));
 
     /* Widget-to-option mapper */
     mapper = new QDataWidgetMapper(this);
