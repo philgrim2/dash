@@ -63,6 +63,9 @@ namespace BCLog {
         QT          = (1 << 19),
         LEVELDB     = (1 << 20),
 
+	// THT 
+	POW         = (1 << 24),
+
         //Start Dash
         CHAINLOCKS  = ((uint64_t)1 << 32),
         GOBJECT     = ((uint64_t)1 << 33),
