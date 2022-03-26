@@ -6,15 +6,15 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/dash
-src/dashd
-src/dash-cli
-src/dash-tx
-src/test/test_dash
-src/test/test_dash_fuzzy
-src/qt/test/test_dash-qt
+src/thought
+src/thoughtd
+src/thought-cli
+src/thought-tx
+src/test/test_thought
+src/test/test_thought_fuzzy
+src/qt/test/test_thought-qt
 src/qt/res/css/colors/*
-src/bench/bench_dash
+src/bench/bench_thought
 
 # autoreconf
 Makefile.in
@@ -37,8 +37,8 @@ config.log
 config.status
 configure
 libtool
-src/config/dash-config.h
-src/config/dash-config.h.in
+src/config/thought-config.h
+src/config/thought-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -85,14 +85,14 @@ libconftest.dylib*
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-dash-qt
+thought-qt
 Dash-Qt.app
 background.tiff*
 !/depends/Makefile
 
 # Unit-tests
 Makefile.test
-dash-qt_test
+thought-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -106,7 +106,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_dash.coverage/
+test_thought.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -124,15 +124,17 @@ test/cache/*
 .autotools
 /doc/doxygen/
 
-libdashconsensus.pc
+thoughtcore-build/
+
+libthoughtconsensus.pc
 contrib/devtools/split-debug.sh
-src/qt/dash-qt.bash
+src/qt/thought-qt.bash
 qa/pull-tester/tests-config.sh
 
 #development symlinks
-dash-cli
-dashd
-dash-qt
+thought-cli
+thoughtd
+thought-qt
 make
 
 /docker/bin
