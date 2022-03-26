@@ -891,8 +891,8 @@
         <translation>Cette étiquette devient rouge si l'un des destinataires reçoit un montant inférieur au niveau de "poussière".</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 duff(s) per input.</source>
-        <translation>Peut varier de ± %1 duff(s) par entrée.</translation>
+        <source>Can vary +/- %1 notion(s) per input.</source>
+        <translation>Peut varier de ± %1 notion(s) par entrée.</translation>
     </message>
     <message>
         <source>Some coins were unselected because they were spent.</source>
@@ -2860,8 +2860,8 @@ https://www.transifex.com/projects/p/thought/</translation>
         <translation>Estimation du délai de confirmation :</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 duffs in fee,&lt;br /&gt;while "at least" pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si les frais personnalisés sont à 1000 duffs et que la transaction fait seulement 250 octets, alors "par kilooctet" coûtera seulement 250 duffs de frais,&lt;br /&gt;alors que "au moins" coûtera 1000 duffs. Pour les transactions de plus d'un kilooctet, les deux coûts seront calculés au kilooctet.</translation>
+        <source>If the custom fee is set to 1000 notions and the transaction is only 250 bytes, then "per kilobyte" only pays 250 notions in fee,&lt;br /&gt;while "at least" pays 1000 notions. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si les frais personnalisés sont à 1000 notions et que la transaction fait seulement 250 octets, alors "par kilooctet" coûtera seulement 250 notions de frais,&lt;br /&gt;alors que "au moins" coûtera 1000 notions. Pour les transactions de plus d'un kilooctet, les deux coûts seront calculés au kilooctet.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for thought transactions than the network can process.</source>
