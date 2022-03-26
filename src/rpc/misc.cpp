@@ -550,7 +550,7 @@ UniValue getaddressmempool(const JSONRPCRequest& request)
             "    \"address\"  (string) The base58check encoded address\n"
             "    \"txid\"  (string) The related txid\n"
             "    \"index\"  (number) The related input or output index\n"
-            "    \"satoshis\"  (number) The difference of duffs\n"
+            "    \"satoshis\"  (number) The difference of notions\n"
             "    \"timestamp\"  (number) The time the transaction entered the mempool (seconds)\n"
             "    \"prevtxid\"  (string) The previous txid (if spending)\n"
             "    \"prevout\"  (string) The previous transaction output index (if spending)\n"
@@ -622,7 +622,7 @@ UniValue getaddressutxos(const JSONRPCRequest& request)
             "    \"txid\"  (string) The output txid\n"
             "    \"outputIndex\"  (number) The output index\n"
             "    \"script\"  (string) The script hex encoded\n"
-            "    \"satoshis\"  (number) The number of duffs of the output\n"
+            "    \"satoshis\"  (number) The number of notions of the output\n"
             "    \"height\"  (number) The block height\n"
             "  }\n"
             "]\n"
@@ -687,7 +687,7 @@ UniValue getaddressdeltas(const JSONRPCRequest& request)
             "\nResult:\n"
             "[\n"
             "  {\n"
-            "    \"satoshis\"  (number) The difference of duffs\n"
+            "    \"satoshis\"  (number) The difference of notions\n"
             "    \"txid\"  (string) The related txid\n"
             "    \"index\"  (number) The related input or output index\n"
             "    \"blockindex\"  (number) The related block index\n"
@@ -772,10 +772,10 @@ UniValue getaddressbalance(const JSONRPCRequest& request)
             "}\n"
             "\nResult:\n"
             "{\n"
-            "  \"balance\": xxxxx,              (numeric) The current total balance in duffs\n"
-            "  \"balance_immature\": xxxxx,     (numeric) The current immature balance in duffs\n"
-            "  \"balance_spendable\": xxxxx,    (numeric) The current spendable balance in duffs\n"
-            "  \"received\": xxxxx              (numeric) The total number of duffs received (including change)\n"
+            "  \"balance\": xxxxx,              (numeric) The current total balance in notions\n"
+            "  \"balance_immature\": xxxxx,     (numeric) The current immature balance in notions\n"
+            "  \"balance_spendable\": xxxxx,    (numeric) The current spendable balance in notions\n"
+            "  \"received\": xxxxx              (numeric) The total number of notions received (including change)\n"
             "}\n"
             "\nExamples:\n"
             + HelpExampleCli("getaddressbalance", "'{\"addresses\": [\"XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg\"]}'")
@@ -1068,7 +1068,7 @@ UniValue logging(const JSONRPCRequest& request)
             "The valid logging categories are: " + ListLogCategories() + "\n"
             "In addition, the following are available as category names with special meanings:\n"
             "  - \"all\",  \"1\" : represent all logging categories.\n"
-            "  - \"thought\" activates all Dash-specific categories at once.\n"
+            "  - \"thought\" activates all Thought-specific categories at once.\n"
             "To deactivate all categories at once you can specify \"all\" in <exclude>.\n"
             "  - \"none\", \"0\" : even if other logging categories are specified, ignore all of them.\n"
             "\nArguments:\n"
@@ -1170,7 +1170,7 @@ static const CRPCCommand commands[] =
     { "addressindex",       "getaddresstxids",        &getaddresstxids,        {"addresses"} },
     { "addressindex",       "getaddressbalance",      &getaddressbalance,      {"addresses"} },
 
-    /* Dash features */
+    /* Thought features */
     { "thought",               "mnsync",                 &mnsync,                 {} },
     { "thought",               "spork",                  &spork,                  {"arg0","value"} },
 
