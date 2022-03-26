@@ -81,7 +81,8 @@ Section -Main SEC0000
     File @abs_top_srcdir@/release/@THOUGHT_DAEMON_NAME@@EXEEXT@
     File @abs_top_srcdir@/release/@THOUGHT_CLI_NAME@@EXEEXT@
     SetOutPath $INSTDIR\doc
-    File /r /x Makefile* @abs_top_srcdir@/doc\*.*
+    File /x *build* @abs_top_srcdir@/doc/*.md
+    File /r @abs_top_srcdir@/doc/release-notes/
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
