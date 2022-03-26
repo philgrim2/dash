@@ -157,7 +157,7 @@ bool AppInit(int argc, char* argv[])
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
-            fprintf(stdout, "Dash Core server starting\n");
+            fprintf(stdout, "Thought Core server starting\n");
 
             // Daemonize
             if (daemon(1, 0)) { // don't chdir (1), do close FDs (0)
