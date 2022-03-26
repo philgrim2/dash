@@ -162,6 +162,13 @@ if TARGET_WINDOWS
 deploy: $(THOUGHT_WIN_INSTALLER)
 endif
 
+binary-tarball: $(THOUGHT_TARBALL)
+
+$(THOUGHT_TARBALL): all
+		$(MKDIR_P) $(TARBALL_DIR)
+		$(MAKE) install "DESTDIR=$(TARBALL_DIR)/$(PACKAGE)"
+		(cd $(TARBALL_DIR) && tar czf ../$(THOUGHT_TARBALL) $(PACKAGE)/bin $(PACKAGE)/share)
+
 $(THOUGHT_QT_BIN): FORCE
 	$(MAKE) -C src qt/$(@F)
 
@@ -262,7 +269,7 @@ EXTRA_DIST += \
     test/util/data/txcreatesignv2.hex \
     test/util/rpcauth-test.py
 
-CLEANFILES = $(OSX_DMG) $(THOUGHT_WIN_INSTALLER)
+CLEANFILES = $(OSX_DMG) $(THOUGHT_WIN_INSTALLER) $(THOUGHT_TARBALL) $(TARBALL_DIR)
 
 .INTERMEDIATE: $(COVERAGE_INFO)
 
