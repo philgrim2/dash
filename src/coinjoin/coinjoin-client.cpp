@@ -1,4 +1,5 @@
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2018-2022 Thought Network Ltd
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1461,7 +1462,7 @@ bool CCoinJoinClientSession::MakeCollateralAmounts(const CompactTallyItem& tally
         // Note, here we first add a zero amount output to get the remainder after all fees and then assign it
         CTransactionBuilderOutput* out = txBuilder.AddOutput();
         CAmount nAmountLeft = txBuilder.GetAmountLeft();
-        // If remainder is denominated add one duff to the fee
+        // If remainder is denominated add one notion to the fee
         out->UpdateAmount(CCoinJoin::IsDenominatedAmount(nAmountLeft) ? nAmountLeft - 1 : nAmountLeft);
 
     } else if (txBuilder.CouldAddOutputs({CCoinJoin::GetCollateralAmount(), CCoinJoin::GetCollateralAmount()})) {
@@ -1474,7 +1475,7 @@ bool CCoinJoinClientSession::MakeCollateralAmounts(const CompactTallyItem& tally
         CTransactionBuilderOutput* out1 = txBuilder.AddOutput();
         CTransactionBuilderOutput* out2 = txBuilder.AddOutput();
 
-        // Create two equal outputs from the available value. This adds one duff to the fee if txBuilder.GetAmountLeft() is odd.
+        // Create two equal outputs from the available value. This adds one notion to the fee if txBuilder.GetAmountLeft() is odd.
         CAmount nAmountOutputs = txBuilder.GetAmountLeft() / 2;
 
         assert(CCoinJoin::IsCollateralAmount(nAmountOutputs));
