@@ -6,6 +6,7 @@
 #include <governance/governance-object.h>
 #include <masternode/masternode-sync.h>
 #include <messagesigner.h>
+#include <spork.h>
 #include <util.h>
 
 #include <evo/deterministicmns.h>
@@ -163,8 +164,7 @@ bool CGovernanceVote::Sign(const CKey& key, const CKeyID& keyID)
 {
     std::string strError;
 
-    // Harden Spork6 so that it is active on testnet and no other networks
-    if (Params().NetworkIDString() == CBaseChainParams::TESTNET) {
+    if (sporkManager.IsSporkActive(SPORK_6_NEW_SIGS)) {
         uint256 hash = GetSignatureHash();
 
         if (!CHashSigner::SignHash(hash, key, vchSig)) {
@@ -198,13 +198,21 @@ bool CGovernanceVote::CheckSignature(const CKeyID& keyID) const
 {
     std::string strError;
 
-    // Harden Spork6 so that it is active on testnet and no other networks
-    if (Params().NetworkIDString() == CBaseChainParams::TESTNET) {
+    if (sporkManager.IsSporkActive(SPORK_6_NEW_SIGS)) {
         uint256 hash = GetSignatureHash();
 
         if (!CHashSigner::VerifyHash(hash, keyID, vchSig, strError)) {
-            LogPrint(BCLog::GOBJECT, "CGovernanceVote::IsValid -- VerifyHash() failed, error: %s\n", strError);
-            return false;
+            // could be a signature in old format
+            std::string strMessage = masternodeOutpoint.ToStringShort() + "|" + nParentHash.ToString() + "|" +
+                                     std::to_string(nVoteSignal) + "|" +
+                                     std::to_string(nVoteOutcome) + "|" +
+                                     std::to_string(nTime);
+
+            if (!CMessageSigner::VerifyMessage(keyID, vchSig, strMessage, strError)) {
+                // nope, not in old format either
+                LogPrint(BCLog::GOBJECT, "CGovernanceVote::IsValid -- VerifyMessage() failed, error: %s\n", strError);
+                return false;
+            }
         }
     } else {
         std::string strMessage = masternodeOutpoint.ToStringShort() + "|" + nParentHash.ToString() + "|" +
@@ -220,6 +228,7 @@ bool CGovernanceVote::CheckSignature(const CKeyID& keyID) const
 
     return true;
 }
+
 
 bool CGovernanceVote::Sign(const CBLSSecretKey& key)
 {
