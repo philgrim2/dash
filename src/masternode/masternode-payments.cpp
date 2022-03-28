@@ -12,6 +12,7 @@
 #include <validation.h>
 
 #include <string>
+#include <cmath>
 
 CMasternodePayments mnpayments;
 
@@ -317,6 +318,7 @@ bool CMasternodePayments::IsTransactionValid(const CTransaction& txNew, int nBlo
 
     for (const auto& txout : voutMasternodePayments) {
         bool found = false;
+
         for (const auto& txout2 : txNew.vout) {
             if (txout == txout2) {
                 found = true;

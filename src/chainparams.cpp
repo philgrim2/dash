@@ -561,11 +561,11 @@ public:
         consensus.BIP66Height = 0; // 0000002acdd29a14583540cb72e1c5cc83783560e38fa7081495d474fe1671f7
         consensus.DIP0001Height = 0;
         consensus.DIP0003Height = 176300;
-        consensus.DIP0003EnforcementHeight = 176300;
-        consensus.DIP0003EnforcementHash = uint256S("002cf59b40b5fb9c6c6c9d36f83e7308a61f9a43878ec5809b09b044be6cff83");
+        consensus.DIP0003EnforcementHeight = 250000;
+        consensus.DIP0003EnforcementHash = uint256S("0x005e9adcb568eca1004db314d037d89079dbaede3f6c139b411dc1b42f6cd53d");
         consensus.DIP0008Height = 776145; // Not active yet, so put it a year out.
-        consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Updated for THT  ~uint256(0) >> 20
-        consensus.cuckooPowLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Added for THT
+        consensus.powLimit = uint256S("0x00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Updated for THT  ~uint256(0) >> 20
+        consensus.cuckooPowLimit = uint256S("0x00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Added for THT
         consensus.cuckooGraphSize = 24; // Added for THT
         consensus.nPowTargetTimespan = 1.618 * 24 * 60 * 60; // Updated for THT
         consensus.nPowTargetSpacing = 1.618 * 60; // Thought: 1.618 Minutes
@@ -1024,8 +1024,8 @@ public:
         nPoolMinParticipants = 2;
         nPoolMaxParticipants = 20;
 
-        // privKey: cP4EKFyJsHT39LDqgdcB43Y3YXjNyjb5Fuas1GQSeAtjnZWmZEQK
-        vSporkAddresses = {"yj949n1UH6fDhw6HtVE5VMj2iSTaSWBMcW"};
+        // privKey: cVcFUUr8Mrv8wM5V6CF38gXr6vMbVFPEWa3vA2fJLdbY53xM76tb
+        vSporkAddresses = {"ydYbzXGsYFQvnxY5cEzVVaUhwZfEVVTVis"};
         nMinSporkKeys = 1;
         // regtest usually has no masternodes in most tests, so don't check for upgraged MNs
         fBIP9CheckMasternodesUpgraded = false;
