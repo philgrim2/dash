@@ -1149,11 +1149,11 @@ std::string CopyrightHolders(const std::string& strPrefix, unsigned int nStartYe
 
     // Check for untranslated substitution to make sure Dash Core copyright is not removed by accident
     if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Dash Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + strprintf(" %u-%u ", 2014, nEndYear) + "The Dash Core developers";
+        strCopyrightHolders += "\n" + strPrefix + strprintf(" %u-%u ", 2014, 2021) + "The Dash Core developers";
     }
     // Check for untranslated substitution to make sure Bitcoin Core copyright is not removed by accident
     if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Bitcoin Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + strprintf(" %u-%u ", 2009, nEndYear) + "The Bitcoin Core developers";
+        strCopyrightHolders += "\n" + strPrefix + strprintf(" %u-%u ", 2009, 2015) + "The Bitcoin Core developers";
     }
     return strCopyrightHolders;
 }
