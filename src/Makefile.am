@@ -152,6 +152,7 @@ THOUGHT_CORE_H = \
   core_io.h \
   core_memusage.h \
   cuckoocache.h \
+  cuckoosolver.h \
   ctpl.h \
   cxxtimer.hpp \
   evo/cbtx.h \
@@ -302,6 +303,7 @@ libthought_server_a_SOURCES = \
   blockfilter.cpp \
   chain.cpp \
   checkpoints.cpp \
+  cuckoosolver.cpp \
   coinjoin/coinjoin.cpp \
   coinjoin/coinjoin-server.cpp \
   consensus/tx_verify.cpp \
