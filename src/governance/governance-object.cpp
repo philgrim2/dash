@@ -302,6 +302,85 @@ void CGovernanceObject::SetMasternodeOutpoint(const COutPoint& outpoint)
     masternodeOutpoint = outpoint;
 }
 
+std::string CGovernanceObject::GetSignatureMessage() const
+{
+    LOCK(cs);
+    std::string strMessage = nHashParent.ToString() + "|" +
+                             std::to_string(nRevision) + "|" +
+                             std::to_string(nTime) + "|" +
+                             GetDataAsHexString() + "|" +
+                             masternodeOutpoint.ToStringShort() + "|" +
+                             nCollateralHash.ToString();
+
+    return strMessage;
+}
+
+bool CGovernanceObject::Sign(const CKey& key, const CKeyID& keyID)
+{
+    std::string strError;
+
+    if (sporkManager.IsSporkActive(SPORK_6_NEW_SIGS)) {
+        uint256 hash = GetSignatureHash();
+
+        if (!CHashSigner::SignHash(hash, key, vchSig)) {
+            LogPrintf("CGovernanceObject::Sign -- SignHash() failed\n");
+            return false;
+        }
+
+        if (!CHashSigner::VerifyHash(hash, keyID, vchSig, strError)) {
+            LogPrintf("CGovernanceObject::Sign -- VerifyHash() failed, error: %s\n", strError);
+            return false;
+        }
+    } else {
+        std::string strMessage = GetSignatureMessage();
+        if (!CMessageSigner::SignMessage(strMessage, vchSig, key)) {
+            LogPrintf("CGovernanceObject::Sign -- SignMessage() failed\n");
+            return false;
+        }
+
+        if (!CMessageSigner::VerifyMessage(keyID, vchSig, strMessage, strError)) {
+            LogPrintf("CGovernanceObject::Sign -- VerifyMessage() failed, error: %s\n", strError);
+            return false;
+        }
+    }
+
+    LogPrint(BCLog::GOBJECT, "CGovernanceObject::Sign -- pubkey id = %s, masternode = %s\n",
+        keyID.ToString(), masternodeOutpoint.ToStringShort());
+
+    return true;
+}
+
+
+
+bool CGovernanceObject::CheckSignature(const CKeyID& keyID) const
+{
+    std::string strError;
+
+    if (sporkManager.IsSporkActive(SPORK_6_NEW_SIGS)) {
+        uint256 hash = GetSignatureHash();
+
+        if (!CHashSigner::VerifyHash(hash, keyID, vchSig, strError)) {
+            // could be an old object
+            std::string strMessage = GetSignatureMessage();
+
+            if (!CMessageSigner::VerifyMessage(keyID, vchSig, strMessage, strError)) {
+                // nope, not in old format either
+                LogPrintf("CGovernance::CheckSignature -- VerifyMessage() failed, error: %s\n", strError);
+                return false;
+            }
+        }
+    } else {
+        std::string strMessage = GetSignatureMessage();
+
+        if (!CMessageSigner::VerifyMessage(keyID, vchSig, strMessage, strError)) {
+            LogPrintf("CGovernance::CheckSignature -- VerifyMessage() failed, error: %s\n", strError);
+            return false;
+        }
+    }
+
+    return true;
+}
+
 bool CGovernanceObject::Sign(const CBLSSecretKey& key)
 {
     CBLSSignature sig = key.Sign(GetSignatureHash());
