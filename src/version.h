@@ -12,7 +12,7 @@
  */
 
 
-// Dash version
+// Thought version
 //static const int PROTOCOL_VERSION = 70219;
 static const int PROTOCOL_VERSION = 70019;
 

@@ -87,7 +87,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-//Dash only features
+//Thought-only features
 bool fMasternodeMode = false;
 bool fDisableGovernance = false;
 /**
@@ -662,13 +662,13 @@ void PrintExceptionContinue(const std::exception_ptr pex, const char* pszExcepti
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\DashCore
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\DashCore
-    // Mac: ~/Library/Application Support/DashCore
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\ThoughtCore
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\ThoughtCore
+    // Mac: ~/Library/Application Support/ThoughtCore
     // Unix: ~/.thoughtcore
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "DashCore";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "ThoughtCore";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -678,7 +678,7 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/DashCore";
+    return pathRet / "Library/Application Support/ThoughtCore";
 #else
     // Unix
     return pathRet / ".thoughtcore";
