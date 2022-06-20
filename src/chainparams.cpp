@@ -665,7 +665,10 @@ public:
 
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet.phee.thought.live"); // Just a static list of stable node(s), only supports x9
+        vSeeds.emplace_back("phee.thought.live"); // Just a static list of stable node(s), only supports x9
+        vSeeds.emplace_back("phi.thought.live"); // Just a static list of stable node(s), only supports x9
+        vSeeds.emplace_back("idea-01.insufficient-light.com"); // Just a static list of stable node(s), only supports x9
+        vSeeds.emplace_back("intuition-01.insufficient-light.com"); // Just a static list of stable node(s), only supports x9
 
         // Testnet Dash addresses start with 'y' FIXME
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,109);
