@@ -34,6 +34,9 @@
 /* Replacement for %s in copyright holders string */
 #undef COPYRIGHT_HOLDERS_SUBSTITUTION
 
+/* Copyright start year */
+#undef COPYRIGHT_START
+
 /* Copyright year */
 #undef COPYRIGHT_YEAR
 
