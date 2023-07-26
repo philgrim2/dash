@@ -44,7 +44,7 @@ struct CSpentIndexValue {
     uint256 txid;
     unsigned int inputIndex;
     int blockHeight;
-    CAmount satoshis;
+    CAmount notions;
     int addressType;
     uint160 addressHash;
 
@@ -55,7 +55,7 @@ struct CSpentIndexValue {
         READWRITE(txid);
         READWRITE(inputIndex);
         READWRITE(blockHeight);
-        READWRITE(satoshis);
+        READWRITE(notions);
         READWRITE(addressType);
         READWRITE(addressHash);
     }
@@ -64,7 +64,7 @@ struct CSpentIndexValue {
         txid = t;
         inputIndex = i;
         blockHeight = h;
-        satoshis = s;
+        notions = s;
         addressType = type;
         addressHash = a;
     }
@@ -77,7 +77,7 @@ struct CSpentIndexValue {
         txid.SetNull();
         inputIndex = 0;
         blockHeight = 0;
-        satoshis = 0;
+        notions = 0;
         addressType = 0;
         addressHash.SetNull();
     }
@@ -208,7 +208,7 @@ struct CAddressUnspentKey {
 };
 
 struct CAddressUnspentValue {
-    CAmount satoshis;
+    CAmount notions;
     CScript script;
     int blockHeight;
 
@@ -216,13 +216,13 @@ struct CAddressUnspentValue {
 
     template <typename Stream, typename Operation>
     inline void SerializationOp(Stream& s, Operation ser_action) {
-        READWRITE(satoshis);
+        READWRITE(notions);
         READWRITE(script);
         READWRITE(blockHeight);
     }
 
-    CAddressUnspentValue(CAmount sats, CScript scriptPubKey, int height) {
-        satoshis = sats;
+    CAddressUnspentValue(CAmount nots, CScript scriptPubKey, int height) {
+        notions = nots;
         script = scriptPubKey;
         blockHeight = height;
     }
@@ -232,13 +232,13 @@ struct CAddressUnspentValue {
     }
 
     void SetNull() {
-        satoshis = -1;
+        notions = -1;
         script.clear();
         blockHeight = 0;
     }
 
     bool IsNull() const {
-        return (satoshis == -1);
+        return (notions == -1);
     }
 };
 

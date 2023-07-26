@@ -190,8 +190,8 @@ void TxToUniv(const CTransaction& tx, const uint256& hashBlock, UniValue& entry,
                 auto it = ptxSpentInfo->mSpentInfo.find(spentKey);
                 if (it != ptxSpentInfo->mSpentInfo.end()) {
                     auto spentInfo = it->second;
-                    in.pushKV("value", ValueFromAmount(spentInfo.satoshis));
-                    in.pushKV("valueSat", spentInfo.satoshis);
+                    in.pushKV("value", ValueFromAmount(spentInfo.notions));
+                    in.pushKV("valueSat", spentInfo.notions);
                     if (spentInfo.addressType == 1) {
                         in.pushKV("address", EncodeDestination(CKeyID(spentInfo.addressHash)));
                     } else if (spentInfo.addressType == 2) {

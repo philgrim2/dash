@@ -550,7 +550,7 @@ UniValue getaddressmempool(const JSONRPCRequest& request)
             "    \"address\"  (string) The base58check encoded address\n"
             "    \"txid\"  (string) The related txid\n"
             "    \"index\"  (number) The related input or output index\n"
-            "    \"satoshis\"  (number) The difference of notions\n"
+            "    \"notions\"  (number) The difference of notions\n"
             "    \"timestamp\"  (number) The time the transaction entered the mempool (seconds)\n"
             "    \"prevtxid\"  (string) The previous txid (if spending)\n"
             "    \"prevout\"  (string) The previous transaction output index (if spending)\n"
@@ -589,7 +589,7 @@ UniValue getaddressmempool(const JSONRPCRequest& request)
         delta.pushKV("address", address);
         delta.pushKV("txid", it->first.txhash.GetHex());
         delta.pushKV("index", (int)it->first.index);
-        delta.pushKV("satoshis", it->second.amount);
+        delta.pushKV("notions", it->second.amount);
         delta.pushKV("timestamp", it->second.time);
         if (it->second.amount < 0) {
             delta.pushKV("prevtxid", it->second.prevhash.GetHex());
@@ -622,7 +622,7 @@ UniValue getaddressutxos(const JSONRPCRequest& request)
             "    \"txid\"  (string) The output txid\n"
             "    \"outputIndex\"  (number) The output index\n"
             "    \"script\"  (string) The script hex encoded\n"
-            "    \"satoshis\"  (number) The number of notions of the output\n"
+            "    \"notions\"  (number) The number of notions of the output\n"
             "    \"height\"  (number) The block height\n"
             "  }\n"
             "]\n"
@@ -660,7 +660,7 @@ UniValue getaddressutxos(const JSONRPCRequest& request)
         output.pushKV("txid", it->first.txhash.GetHex());
         output.pushKV("outputIndex", (int)it->first.index);
         output.pushKV("script", HexStr(it->second.script.begin(), it->second.script.end()));
-        output.pushKV("satoshis", it->second.satoshis);
+        output.pushKV("notions", it->second.notions);
         output.pushKV("height", it->second.blockHeight);
         result.push_back(output);
     }
@@ -687,7 +687,7 @@ UniValue getaddressdeltas(const JSONRPCRequest& request)
             "\nResult:\n"
             "[\n"
             "  {\n"
-            "    \"satoshis\"  (number) The difference of notions\n"
+            "    \"notions\"  (number) The difference of notions\n"
             "    \"txid\"  (string) The related txid\n"
             "    \"index\"  (number) The related input or output index\n"
             "    \"blockindex\"  (number) The related block index\n"
@@ -744,7 +744,7 @@ UniValue getaddressdeltas(const JSONRPCRequest& request)
         }
 
         UniValue delta(UniValue::VOBJ);
-        delta.pushKV("satoshis", it->second);
+        delta.pushKV("notions", it->second);
         delta.pushKV("txid", it->first.txhash.GetHex());
         delta.pushKV("index", (int)it->first.index);
         delta.pushKV("blockindex", (int)it->first.txindex);
