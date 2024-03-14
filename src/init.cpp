@@ -1681,6 +1681,15 @@ bool AppInitLockDataDirectory()
 
 bool AppInitMain()
 {
+
+    //********
+    // Temporarily disable anything but testnet
+    // *******
+    if (!gArgs.IsArgSet("-testnet"))
+    {
+        return InitError("This release valid on testnet only.");
+    }
+
     const CChainParams& chainparams = Params();
     // ********************************************************* Step 4a: application initialization
 #ifndef WIN32
