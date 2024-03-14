@@ -26,16 +26,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Dash-Qt</string>
+  <string>Thought-Qt</string>
 
   <key>CFBundleName</key>
-  <string>Dash-Qt</string>
+  <string>Thought-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.dash.Dash-Qt</string>
+  <string>live.thought.Thought-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -43,7 +43,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.dash.DashPayment</string>
+      <string>live.thought.ThoughtPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>dash</string>
@@ -55,9 +55,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.dash.paymentrequest</string>
+      <string>live.thought.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Dash payment request</string>
+      <string>Thought payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

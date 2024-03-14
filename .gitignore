@@ -86,7 +86,7 @@ libconftest.dylib*
 *.qm
 Makefile
 thought-qt
-Dash-Qt.app
+Thought-Qt.app
 background.tiff*
 !/depends/Makefile
 
