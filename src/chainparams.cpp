@@ -352,7 +352,7 @@ public:
         consensus.DIP0003Height = 940200; // Updated for THT - this is the actual block
         consensus.DIP0003EnforcementHeight = 940200;
         consensus.DIP0003EnforcementHash = uint256S("0x000aad82ae5009af6e3cb1d4da1d7fa0d3758b7c4a28426f67c3d3cb9b653f52");
-        consensus.DIP0008Height = 1631340; // Updated for THT - we don't have DIP0008 yet, this corresponds to 20 March 2023
+        consensus.DIP0008Height = 20000000; // far out in future until we implement DIP0008 in v18
         consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Updated for THT
 	consensus.cuckooPowLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Added for THT
 	consensus.cuckooGraphSize = 24; // Added for THT
@@ -567,7 +567,7 @@ public:
         consensus.DIP0003Height = 176300;
         consensus.DIP0003EnforcementHeight = 250000;
         consensus.DIP0003EnforcementHash = uint256S("0x005e9adcb568eca1004db314d037d89079dbaede3f6c139b411dc1b42f6cd53d");
-        consensus.DIP0008Height = 776145; // Not active yet, so put it a year out.
+        consensus.DIP0008Height = 10000000; // far out in future until we implement dip0008 in v18
         consensus.powLimit = uint256S("0x00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Updated for THT  ~uint256(0) >> 20
         consensus.cuckooPowLimit = uint256S("0x00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Added for THT
         consensus.cuckooGraphSize = 24; // Added for THT
