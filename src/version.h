@@ -14,22 +14,22 @@
 
 // Thought version
 //static const int PROTOCOL_VERSION = 70219;
-static const int PROTOCOL_VERSION = 70019;
+static const int PROTOCOL_VERSION = 70191;
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
 
 //! disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION = 70018;
+static const int MIN_PEER_PROTO_VERSION = 70184
 
 //! minimum proto version of masternode to accept in DKGs
-static const int MIN_MASTERNODE_PROTO_VERSION = 70019;
+static const int MIN_MASTERNODE_PROTO_VERSION = 70184;
 
 //! minimum proto version for governance sync and messages
-static const int MIN_GOVERNANCE_PEER_PROTO_VERSION = 70019;
+static const int MIN_GOVERNANCE_PEER_PROTO_VERSION = 70184;
 
 //! minimum proto version to broadcast governance messages from banned masternodes
-static const int GOVERNANCE_POSE_BANNED_VOTES_VERSION = 70019;
+static const int GOVERNANCE_POSE_BANNED_VOTES_VERSION = 70190;
 
 //! nTime field added to CAddress, starting with this version;
 //! if possible, avoid requesting addresses nodes older than this
@@ -40,15 +40,15 @@ static const int LLMQS_PROTO_VERSION = 70018;
 
 //! introduction of SENDDSQUEUE
 //! TODO we can remove this in 0.15.0.0
-static const int SENDDSQUEUE_PROTO_VERSION = 70019;
+static const int SENDDSQUEUE_PROTO_VERSION = 70190;
 
 //! minimum peer version accepted by mixing pool
-static const int MIN_COINJOIN_PEER_PROTO_VERSION = 70018;
+static const int MIN_COINJOIN_PEER_PROTO_VERSION = 70184;
 
 //! protocol version is included in MNAUTH starting with this version
-static const int MNAUTH_NODE_VER_VERSION = 70019;
+static const int MNAUTH_NODE_VER_VERSION = 70190;
 
 //! introduction of QGETDATA/QDATA messages
-static const int LLMQ_DATA_MESSAGES_VERSION = 70019;
+static const int LLMQ_DATA_MESSAGES_VERSION = 70190;
 
 #endif // THOUGHT_VERSION_H
