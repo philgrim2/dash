@@ -335,10 +335,10 @@ public:
         consensus.nMasternodePaymentsIncreasePeriod = 890*60; // Updated for THT
         consensus.nInstantSendConfirmationsRequired = 6;
         consensus.nInstantSendKeepLock = 24;
-        consensus.nBudgetPaymentsStartBlock = 385627; // Updated for THT
+        consensus.nBudgetPaymentsStartBlock = 10000000; // Updated for THT
         consensus.nBudgetPaymentsCycleBlocks = 26700; // Updated for THT
         consensus.nBudgetPaymentsWindowBlocks = 100;
-        consensus.nSuperblockStartBlock = 2290357; // Updated for THT - approx Mar 2025
+        consensus.nSuperblockStartBlock = 10000001; // Updated for THT
         consensus.nSuperblockStartHash = uint256S("0052548ec1345c8769322d9298297cefd5aa65504a02619a128bfb62d11d89f9"); // Update this
         consensus.nSuperblockCycle = 26700; // Updated for THT
         consensus.nGovernanceMinQuorum = 40; // Updated for THT
@@ -550,10 +550,10 @@ public:
         consensus.nMasternodePaymentsIncreasePeriod = 100;
         consensus.nInstantSendConfirmationsRequired = 2;
         consensus.nInstantSendKeepLock = 6;
-        consensus.nBudgetPaymentsStartBlock = 4100;
+        consensus.nBudgetPaymentsStartBlock = 10000000;
         consensus.nBudgetPaymentsCycleBlocks = 50;
         consensus.nBudgetPaymentsWindowBlocks = 10;
-        consensus.nSuperblockStartBlock = 4200; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPeymentsStartBlock
+        consensus.nSuperblockStartBlock = 10000001; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPeymentsStartBlock
         consensus.nSuperblockStartHash = uint256(); // do not check this on testnet
         consensus.nSuperblockCycle = 24; // Superblocks can be issued hourly on testnet
         consensus.nGovernanceMinQuorum = 1;
