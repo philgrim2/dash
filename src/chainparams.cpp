@@ -397,15 +397,15 @@ public:
 
         // Deployment of DIP0008 - not yet deployed on THT
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].bit = 4;
-        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nStartTime = 1648440000; // April 28th, 2022
-        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nTimeout = 1679976000; // April 28th, 2023
+        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nStartTime = 1840507200; // April 28th, 2028
+        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nTimeout = 1872043200; // April 28th, 2029
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nWindowSize = 890;
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nThresholdStart = 89; // 10% of 890
 
         // Deployment of Block Reward Reallocation - Not deployed on THT
         consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].bit = 5;
-        consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nStartTime = 1648440000;; // April 28th, 2022
-        consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nTimeout = 1679976000; // April 28th, 2023
+        consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nStartTime = 1840507200; // April 28th, 2028
+        consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nTimeout = 1872043200; // April 28th, 2029
         consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nWindowSize = 890;
         consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nThresholdStart = 712; // 80% of 890
         consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nThresholdMin = 534; // 60% of 890
@@ -413,8 +413,8 @@ public:
 
         // Deployment of DIP0020, DIP0021 and LLMQ_100_67 quorums - Not yet deployed on THT
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].bit = 6;
-        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nStartTime = 1648440000;; // April 28th, 2022
-        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nTimeout = 1679976000; // April 28th, 2023
+        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nStartTime = 1840507200; // April 28th, 2028
+        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nTimeout = 1872043200; // April 28th, 2029
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nWindowSize = 890;
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nThresholdStart = 712; // 80% of 890
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nThresholdMin = 534; // 60% of 890
@@ -611,14 +611,14 @@ public:
 
         // Deployment of DIP0008
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].bit = 4;
-        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nStartTime = 1648008000; // Mar 23rd, 2022
+        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nStartTime = 1840507200; // Apr 28th, 2028
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nTimeout = 999999999999ULL;
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nWindowSize = 100;
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0008].nThresholdStart = 20; // 20% of 100
 
         // Deployment of Block Reward Reallocation
         consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].bit = 5;
-        consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nStartTime = 1648008000; // Mar 23rd, 2022
+        consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nStartTime = 1840507200; // Apr 28th, 2028
         consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nTimeout = 999999999999ULL;
         consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nWindowSize = 100;
         consensus.vDeployments[Consensus::DEPLOYMENT_REALLOC].nThresholdStart = 80; // 80% of 100
@@ -627,8 +627,8 @@ public:
 
         // Deployment of DIP0020, DIP0021 and LLMQ_100_67 quorums
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].bit = 6;
-        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nStartTime = 1648008000; // Mar 23rd, 2022
-        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nTimeout = 1679544000; // Mar 23rd, 2023
+        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nStartTime = 1840507200; // Apr 28th, 2028
+        consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nTimeout = 999999999999ULL;
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nWindowSize = 100;
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nThresholdStart = 80; // 80% of 100
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0020].nThresholdMin = 60; // 60% of 100
