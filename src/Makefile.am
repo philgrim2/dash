@@ -162,6 +162,9 @@ THOUGHT_CORE_H = \
   evo/providertx.h \
   evo/simplifiedmns.h \
   evo/specialtx.h \
+  evo/concepttx.cpp \
+  evo/nuancetx.cpp \
+  evo/mcptx.cpp \
   dsnotificationinterface.h \
   governance/governance.h \
   governance/governance-classes.h \
@@ -315,6 +318,9 @@ libthought_server_a_SOURCES = \
   evo/providertx.cpp \
   evo/simplifiedmns.cpp \
   evo/specialtx.cpp \
+  evo/concepttx.cpp \
+  evo/nuancetx.cpp \
+  evo/mcptx.cpp \
   httprpc.cpp \
   httpserver.cpp \
   init.cpp \
